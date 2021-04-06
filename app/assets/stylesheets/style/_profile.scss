@@ -1,0 +1,57 @@
+@import 'other/base_color';
+
+.profile-titles {
+    text-align: center;
+
+    & h1 {
+        font-size: 30px;
+        color: $cblue;
+    }
+}
+
+.profiles {
+    & .about {
+        width: 75px;
+        font-size: 15px;
+        color: $cblue;
+        border-bottom: 1px solid $cblue;
+        padding: 3px;
+    }
+    & li {
+        font-size: 15px;
+        color: $cblue;
+        margin: 10px;
+    }
+
+    & p {
+        font-size: 15px;
+        color: $cblue;
+    }
+
+    & .profile-lists {
+        display: flex;
+        flex-direction: row;
+
+        & .left-pro-li  {
+            list-style: none;
+        }
+    & .pro-symbol {
+        list-style: none;
+    }
+
+        & .right-pro-li  {
+            list-style: none;
+        }
+    }
+
+    .careers {
+        
+        & .career-title {
+            width: 30px;
+            font-size: 15px;
+            color: $cblue;
+            border-bottom: 1px solid $cblue;
+            padding: 3px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+/******************************************************************
+
+Stylesheet: 1280px以上のモニタで適用
+
+******************************************************************/
+
+@import 'other/base_color';
+
+@media screen and (min-width: 1280px) {
+
+    main .main-title {
+        height: 312.3px;
+
+        & #box_fixed {
+        height: 81%;
+        
+            & .titles h1 {
+                font-size: 100px;
+            }
+
+            & .titles p {
+                font-size: 33px;
+            }
+        }
+    }
+
+}

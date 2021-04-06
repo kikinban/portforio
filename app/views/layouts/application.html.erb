@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;500&display=swap" rel="stylesheet">
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%# 共通ヘッダー %>
+    <header>
+      <input id="menu" type="checkbox">
+      <label for="menu" class="open">
+          <span class="open-line"></span>
+          <span class="open-line"></span>
+          <span class="open-line"></span>
+      </label>
+      <label for="menu" class="back"></label>
+      <aside>
+        <label for="menu" class="close">
+          <span id="line-1" class="close-line"></span>
+          <span id="line-2" class="close-line"></span>
+        </label>
+        <nav>
+          <ul>
+            <li id="header-list">PROFIILE</li>
+            <li id="header-list">REPORTS</li>
+            <li id="header-list">WORKS</li>
+            <li id="header-list">CONTACT</li>
+            <li id="header-list"><img src="/insta.png" alt=""></li>
+            <li id="header-list"><img src="/twitter.png" alt=""></li>
+          </ul>
+        </nav>
+      </aside>
+    </header>
+
+    <%# 別ファイルのボディタグが反映される %>
+    <main><%= yield %></main>
+
+    <%# 共通フッター %>
+    <footer>
+        <ul id="foo_title">
+          <li>TOP</li>
+          <li>PROFIILE</li>
+          <li>REPORTS</li>
+          <li>WORKS</li>
+          <li>CONTACT</li>
+        </ul>
+        <p>© 2021 Kohata Misa</p>
+    </footer>
+  </body>
+</html>
+

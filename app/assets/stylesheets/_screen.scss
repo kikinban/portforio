@@ -1,0 +1,31 @@
+
+
+// ~ デバイスの大きさに合わせて適用される ~
+
+//スマホを横に傾けた時に適用
+@media screen and (min-width: 480px) {
+   @import 'style/breakpoints/480up';
+}
+
+//タブレットに適用
+@media screen and (min-width: 600px) {
+   @import 'style/breakpoints/600up';
+}
+
+//小さいディスプレイやノートpc
+@media screen and (min-width: 960px) {
+   @import 'style/breakpoints/960up';
+}
+
+//pcディスプレイ
+@media screen and (min-width: 1280px) {
+   @import 'style/breakpoints/1280up';
+}
+
+// ~　レティナディスプレイ　~
+
+@media screen and (min-resolution: 192dpi),
+      (-webkit-min-device-pixel-ratio: 2) {
+         @import 'style/breakpoints/2x';
+}
+

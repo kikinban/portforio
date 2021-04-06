@@ -1,0 +1,39 @@
+/******************************************************************
+
+Stylesheet: 480px以上(スマホの横向き)のモニタで適用
+
+******************************************************************/
+@import 'other/base_color';
+
+@media screen and (min-width: 480px) {
+
+    main .main-title {
+        height: 218.45px;
+
+        & #box_fixed {
+        height: 81%;
+        
+            & .titles h1 {
+                font-size: 50px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    display: inline-block;
+                    bottom: -10px;
+                    width: 205.4px;
+                    height: 2px;
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    background-color: $pink;
+                }
+            }
+
+            & .titles p {
+                font-size: 16px;
+            }
+        }
+    }
+
+}
