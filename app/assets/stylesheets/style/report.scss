@@ -4,6 +4,7 @@
 
 /* ---- 文字調節 ---- */
 .report-title {
+  text-align: center;
   & h1 {
     font-size: 30px;
     color: $cblue;
@@ -15,6 +16,15 @@
 }
 
 /* ---- ドロップダウンメニュー ---- */
+.button-flex {
+  display: flex;
+  text-align: center;
+
+  & #check-button {
+    width: 20px;
+    height: 10px;
+  }
+}
 
 /* ---- メイン ---- */
 .report-main {
