@@ -1,57 +1,101 @@
-@import 'other/base_color';
+@import "other/base_color";
 
+/* ---- タイトル ---- */
 .profile-titles {
-    text-align: center;
+  text-align: center;
 
-    & h1 {
-        font-size: 30px;
-        color: $cblue;
-    }
+  & h1 {
+    font-size: 30px;
+    color: $cblue;
+  }
 }
 
+/* ---- プロフィール全体 ---- */
+
+/* 基本プロフィール */
 .profiles {
-    & .about {
-        width: 75px;
-        font-size: 15px;
-        color: $cblue;
-        border-bottom: 1px solid $cblue;
-        padding: 3px;
-    }
-    & li {
-        font-size: 15px;
-        color: $cblue;
-        margin: 10px;
-    }
+  position: relative;
 
-    & p {
-        font-size: 15px;
-        color: $cblue;
-    }
+  /* 文字設定 */
+  & .about {
+    width: 75px;
+    font-size: 15px;
+    color: $cblue;
+    border-bottom: 1px solid $cblue;
+    padding: 3px;
+    margin-left: 10px;
+  }
 
+  & .small-name {
+    font-size: 2px;
+    position: absolute;
+    top: 20px;
+    left: 58%;
+  }
+
+  & li {
+    font-size: 15px;
+    color: $cblue;
+    margin: 10px;
+  }
+
+  & p {
+    font-size: 15px;
+    color: $cblue;
+  }
+
+  /* リストを横並びにする */
+  & #pro-center {
+    /* リスト3つを中央揃え */
     & .profile-lists {
-        display: flex;
-        flex-direction: row;
+      padding: 0px 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      justify-content: space-around;
 
-        & .left-pro-li  {
-            list-style: none;
-        }
-    & .pro-symbol {
+      & .left-pro-li {
         list-style: none;
+      }
+
+      & .pro-symbol {
+        list-style: none;
+      }
+
+      & .right-pro-li {
+        list-style: none;
+      }
+    }
+  }
+
+  /* 経歴 */
+  .careers {
+    /* 経歴タイトル */
+    & .career-title {
+      width: 30px;
+      font-size: 15px;
+      color: $cblue;
+      border-bottom: 1px solid $cblue;
+      padding: 3px;
+      margin-left: 10px;
     }
 
-        & .right-pro-li  {
-            list-style: none;
-        }
+    /* 保育士歴 */
+    & .year {
+      margin-left: 10px;
     }
 
-    .careers {
-        
-        & .career-title {
-            width: 30px;
-            font-size: 15px;
-            color: $cblue;
-            border-bottom: 1px solid $cblue;
-            padding: 3px;
-        }
+    /* 業務内容 */
+    & #career {
+      margin: 0px 10px;
+
+      & .business-content {
+        margin-top: 10px;
+      }
+
+      & ul li {
+        list-style: none;
+      }
     }
+  }
 }
