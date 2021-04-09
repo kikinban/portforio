@@ -1,0 +1,30 @@
+@import "other/base_color";
+
+/* レポート画面css */
+
+/* ---- 文字調節 ---- */
+.report-title {
+  & h1 {
+    font-size: 30px;
+    color: $cblue;
+  }
+
+  & p {
+    font-size: 15px;
+  }
+}
+
+/* ---- ドロップダウンメニュー ---- */
+
+/* ---- メイン ---- */
+.report-main {
+  & .record-data {
+    color: grey;
+  }
+
+  & .record-content {
+    width: 100%;
+    max-width: 100%;
+    height: 30%;
+  }
+}

@@ -1,8 +1,27 @@
 
-<div>
+<div class="report-title">
     <h1>REPORTS</h1>
     <p>勉強した言語・日付ごとの内容をまとめました</p>           
 </div>
+<%# ---- ドロップダウンメニュー 月ごとに検索 ---- %>
+<select id="month-box" name="month">
+    <option value="1">10月</option>
+    <option value="2">11月</option>
+    <option value="3">12月</option>
+    <option value="4">1月</option>
+    <option value="5">2月</option>
+    <option value="6">3月</option>
+    <option value="7">4月</option>
+</select>
 <div>
-    
+    <input id="check-button" type="button" value="検索">
+</div>
+<%# ---- メインレポート画面 ---- %>
+<div class="report-main">
+    <div class="record">
+        <h2 class="record-data">日付が自動で反映されます</h2>
+    </div>
+    <div class="record-content">
+        <div class="content-body">データベースを利用して、反映させます</div>
+    </div>
 </div>
