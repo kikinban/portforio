@@ -16,9 +16,18 @@
   }
 }
 
-.contact-form {
-  & .main-form {
+.main-form {
+  & #contact-form {
     text-align: center;
     margin: 20px 10px 0px 10px;
+
+    & .forms {
+      margin-bottom: 10px;
+    }
+
+    & .form-submit {
+      width: 100px;
+      height: 25px;
+    }
   }
 }
