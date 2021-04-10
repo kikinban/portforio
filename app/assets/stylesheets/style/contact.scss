@@ -1,6 +1,7 @@
 @import "other/base_color";
 /* コンタクトページcss */
 
+/* ---- 文字配置 ---- */
 .contact-title {
   text-align: center;
   margin-bottom: 10px;
@@ -16,6 +17,7 @@
   }
 }
 
+/* ---- フォーム部分作成 ---- */
 .main-form {
   & #contact-form {
     text-align: center;
