@@ -1,7 +1,7 @@
 class PortforioController < ApplicationController
   def top
   end
-  def profiile
+  def profile
   end
   def report
   end
