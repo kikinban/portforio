@@ -14,320 +14,327 @@
  *= require_self
  */
 
-
 //リセットcss
-@import 'other/reset';
+@import "other/reset";
 
 //サイズに応じて適用されるcss(このファイル内はスマホ画面を基準として記述している）
 
-
 //ベースとなるカラーコード
-@import 'other/base_color';
-
-
+@import "other/base_color";
 
 body {
-    font-family: 'Kiwi Maru', serif;
-    font-weight: 300;
-    width: 100%;
-    height: 890px;
-    background-color: $main;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 300;
+  width: 100%;
+  height: 890px;
+  background-color: $main;
 }
 
 /* 共通ヘッダー */
 body {
+  /* ---- ハンバーガーメニュー配置 ---- */
+  & header {
+    height: 40px;
+  }
+  /* アイコン配置 */
+  & .open {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+  }
 
-    /* ---- ハンバーガーメニュー配置 ----　*/
-    & header {
-        height: 40px;
-    }
-    /*　アイコン配置 */
-    & .open {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 100;
-        display: flex;
-        flex-direction: column;
-    }
+  /* アイコンデザイン */
+  & .open-line {
+    border-top: 2px solid $cblue;
+    width: 15px;
+    height: 3px;
+    display: inline-block;
+  }
 
-    /* アイコンデザイン */
-    & .open-line {
-        border-top: 2px solid $cblue;
-        width: 15px;
-        height: 3px;
-        display: inline-block;
-    }
+  /* チェックボックスを隠す */
+  & input[type="checkbox"] {
+    position: absolute;
+    right: -50vh;
+    display: none;
+  }
 
-    /* チェックボックスを隠す */
-    & input[type="checkbox"] {
-        position: absolute;
-        right: -50vh;
-        display: none;
-    }
+  /* 出てくるヘッダー（リスト） */
+  & aside {
+    position: absolute;
+    right: -80%;
+    height: 100%;
+    width: 80%;
+    transition: all 0.2s;
+    background-color: #fffef5;
+    z-index: 99;
 
-    /* 出てくるヘッダー（リスト） */
-    & aside {
-        position: absolute;
-        right: -80%;
-        height: 100%;
-        width: 80%;
-        transition: all 0.2s;
-        background-color: #fffef5;
-        z-index: 99;
+    & nav {
+      margin: 10px 10px 0px 10px;
 
-        & nav {
-            margin: 10px 10px 0px 10px;
+      & #header-list {
+        padding: 10px;
+        font-size: 15px;
+        text-align: center;
+        border-bottom: 1px solid $cblue;
 
-            & #header-list {
-                padding: 10px;
-                font-size: 15px;
-                text-align: center;
-                border-bottom: 1px solid $cblue;
-
-                & img {
-                    width: 15px;
-                    height: auto;
-                }
-            }
+        & img {
+          width: 15px;
+          height: auto;
         }
-    }
+      }
 
-    /* ×ボタン表示 */
-    & .close-line {
-        border-top: 2px solid $cblue;
-        width: 15px;
-        display: inline-block;
-        position: absolute;
-        top: 15px;
-        right: 10px;
-    }
-    
-    /* ×ボタンの線回転 */
-    & #line-1 {
-        transform: rotate( -45deg);
-    }
-    
-    & #line-2 {
-        transform: rotate( 45deg);
-    }
+      & .header-link {
+        text-decoration: none;
+        color: $cblue;
 
-    /* クリック時に、リスト表示が右寄りに配置 */
-    & input[type="checkbox"]:checked ~ aside {
-        right: 0;
+        &:visited {
+          text-decoration: none;
+          color: $cblue;
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: $cblue;
+        }
+
+        &:active {
+          text-decoration: none;
+          color: $cblue;
+        }
+      }
     }
+  }
 
-    /*　クリック時にアイコンが消える */
-    & input[type="checkbox"]:checked ~ .open {
-        display: none;
-    }
+  /* ×ボタン表示 */
+  & .close-line {
+    border-top: 2px solid $cblue;
+    width: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
 
-    /* クリック時に出てくる半透明の画面 */
-    & input[type="checkbox"]:checked ~ .back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: white;
-        opacity: 0.5;
-        z-index: 99;
-    }
+  /* ×ボタンの線回転 */
+  & #line-1 {
+    transform: rotate(-45deg);
+  }
 
+  & #line-2 {
+    transform: rotate(45deg);
+  }
 
+  /* クリック時に、リスト表示が右寄りに配置 */
+  & input[type="checkbox"]:checked ~ aside {
+    right: 0;
+  }
 
+  /* クリック時にアイコンが消える */
+  & input[type="checkbox"]:checked ~ .open {
+    display: none;
+  }
+
+  /* クリック時に出てくる半透明の画面 */
+  & input[type="checkbox"]:checked ~ .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.5;
+    z-index: 99;
+  }
 }
 
 /* トップページ */
 
-/* メインタイトル　*/
+/* メインタイトル */
 .main-title {
-    height: 144.22px;
+  height: 144.22px;
+  position: relative;
+
+  /* タイトル固定ボックス */
+  & #box_fixed {
+    width: 74%;
+    height: 58%;
     position: relative;
 
-    /* タイトル固定ボックス */
-    & #box_fixed {
-        width: 74%;
-        height: 58%;
+    /* 文字位置調節 */
+    & .titles {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+
+      /* メインタイトル */
+      & h1 {
+        font-size: 30px;
+        text-shadow: 0px 1px 1px #424a50;
+        font-weight: 100;
+        color: $cblue;
         position: relative;
+        display: inline-block;
 
-        /* 文字位置調節 */
-        & .titles {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate( -50%, -50%);
-            -webkit-transform: translate( -50%,-50%);
-
-            /* メインタイトル */
-            & h1 {
-            font-size: 30px;
-            text-shadow: 0px 1px 1px #424a50;
-            font-weight: 100;
-            color: $cblue;
-            position: relative;
-            display: inline-block;
-       
-                &::before {
-                content: '';
-                position: absolute;
-                left: 50%;
-                display: inline-block;
-                bottom: -10px;
-                width: 143.76px;
-                height: 2px;
-                -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
-                background-color: $pink;
-                }
-            }
-            
-            /* タイトル文字下　*/
-            & p {
-                font-size: 10px;
-                position: relative;
-                top: 15px;    
-                text-align: center;
-                color: $cblue;
-            }
-
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          display: inline-block;
+          bottom: -10px;
+          width: 143.76px;
+          height: 2px;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background-color: $pink;
         }
-    }
+      }
 
-    /* メイン背景 */
-    & img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        position: absolute;
-        top: 0;
-        opacity: 0.7;
+      /* タイトル文字下 */
+      & p {
+        font-size: 10px;
+        position: relative;
+        top: 15px;
+        text-align: center;
+        color: $cblue;
+      }
     }
-    
+  }
+
+  /* メイン背景 */
+  & img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+  }
 }
 
-/* 全体コンテンツ　*/
+/* 全体コンテンツ */
 main {
-    .top-contents {
-        height: 590px;
-        position: relative;
-        
-        /* レポート配置 */
-        & .each-contents-1 {
-            height: 297px;
-            text-align: center;
+  .top-contents {
+    height: 590px;
+    position: relative;
 
-            & .reports {
-                display: inline-block;
+    /* レポート配置 */
+    & .each-contents-1 {
+      height: 297px;
+      text-align: center;
 
-                /* 月ごとリスト */
-                & ul {
-                    list-style: none;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
+      & .reports {
+        display: inline-block;
 
-                    & li {
-                        position: relative;
-                        margin: 20px;
+        /* 月ごとリスト */
+        & ul {
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
 
-                        & p {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            -webkit-transform: translate(-50% ,-50%);
-                            transform: translate(-50% ,-50%);
-                            font-size: 15px;
-                            font-weight: bolder;
-                        }
+          & li {
+            position: relative;
+            margin: 20px;
 
-                        & img {
-                            width: 73.3px;
-                            height: 70px;
-                        }
-                    }   
-                }
+            & p {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              font-size: 15px;
+              font-weight: bolder;
             }
-        }
 
-        /* ワーク部分 */
-        & .each-contents-2 {
-            height: 293px;
-            text-align: center;
-            
-            & ul {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                list-style: none;
-
-                & li {
-                    width: 70px;
-                    height: 70px;
-                    border: 2px solid pink;
-                    margin: 20px;
-
-                }
+            & img {
+              width: 73.3px;
+              height: 70px;
             }
+          }
         }
-
-        /* レポート・ワークタイトル文字 */
-        & h2 {
-            font-size: 20px;
-            font-weight: 100;
-            margin: 10px 0px;
-            color: $cblue;
-        }
-
-        & p {
-            color: $cblue;
-            font-weight: 100;
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
+      }
     }
+
+    /* ワーク部分 */
+    & .each-contents-2 {
+      height: 293px;
+      text-align: center;
+
+      & ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+
+        & li {
+          width: 70px;
+          height: 70px;
+          border: 2px solid pink;
+          margin: 20px;
+        }
+      }
+    }
+
+    /* レポート・ワークタイトル文字 */
+    & h2 {
+      font-size: 20px;
+      font-weight: 100;
+      margin: 10px 0px;
+      color: $cblue;
+    }
+
+    & p {
+      color: $cblue;
+      font-weight: 100;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 /* 共通フッダー */
 footer {
-    width: 100%;
-    height: 50px;
+  width: 100%;
+  height: 50px;
 
-    & ul#foo_title {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
+  & ul#foo_title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
 
-        & > li {
-            font-size: 15px;
-            margin: 5px 30px;
-            color: $cblue;
-        }
-    } 
-
-    & p {
-        color: $cblue;
-        font-size: 10px;
-        text-align: center;
-        margin-top: 10px;
+    & > li {
+      font-size: 15px;
+      margin: 5px 30px;
+      color: $cblue;
     }
+  }
+
+  & p {
+    color: $cblue;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 // ~ デバイスの大きさに合わせて適用される ~
 
 //スマホを横に傾けた時に適用
-@import 'style/breakpoints/480up';
+@import "style/breakpoints/480up";
 
- 
 // //タブレットに適用
-@import 'style/breakpoints/600up';
+@import "style/breakpoints/600up";
 
- 
 // //小さいディスプレイやノートpc
-@import 'style/breakpoints/960up';
- 
+@import "style/breakpoints/960up";
+
 // //pcディスプレイ
-@import 'style/breakpoints/1280up';
+@import "style/breakpoints/1280up";
