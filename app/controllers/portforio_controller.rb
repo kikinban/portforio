@@ -9,10 +9,4 @@ class PortforioController < ApplicationController
   end
   def contact
   end
-  def login
-  end
-  def mypage 
-  end
-  def post
-  end
 end
