@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'posts/index'
+  get 'posts/index' => "posts#index"
   get "/" => "portforio#top"
   get "/profile" => "portforio#profile"
   get "/report" => "portforio#report"
