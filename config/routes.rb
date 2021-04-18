@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+ # 投稿機能関連
+  get "posts/index" => "posts#index"
+  get "posts/new" => "posts#new"
 
-  get 'posts/index' => "posts#index"
+ # 主要ページ関連
   get "/" => "portforio#top"
   get "/profile" => "portforio#profile"
   get "/report" => "portforio#report"
