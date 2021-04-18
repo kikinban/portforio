@@ -2,7 +2,9 @@
 <div class="main posts-new">
   <div class="container">
     <h1 class="form-heading">学習記録 投稿画面</h1>
-    <textarea name=""></textarea>
-    <input type="submit" value="保存">
+    <%= form_tag("/posts/create") do %>
+        <textarea name="learning_content"></textarea>
+        <input type="submit" value="保存">
+    <% end %>
   </div>
 </div>
