@@ -1,19 +1,27 @@
 <%= form_with model: @post, url: posts_create_path do |form| %>
-    <%# 日付 %>    
+    <%# 日付 %>
+    <%= form.label :date, "日付" %>    
     <%= form.date_select :date %>
     <%# 学習時間 %>
+    <%= form.label :date, "時間" %>
     <%= form.number_field :time %>
     <%# 学習計画 %>
+    <%= form.label :date, "学習計画" %>
     <%= form.text_field :learning_plan %>
     <%# 学習内容 %>
+    <%= form.label :date, "学習内容" %>
     <%= form.text_area :learning_content %>
     <%# 理解が浅い部分 %>
+    <%= form.label :date, "理解が浅い内容" %>
     <%= form.text_area :it_took_time %>
     <%# 解決までに時間を要した内容 %>
+    <%= form.label :date, "解決するまでに時間を要した内容" %>
     <%= form.text_area :something_felt %>
     <%# 学習して感じたこと %>
+    <%= form.label :date, "学習して感じたこと" %>
     <%= form.text_area :notices %>
     <%# 特記事項 %>
+    <%= form.label :date, "明日の学習計画" %>
     <%= form.text_area :tomorrow %>
     <%# 送信ボタン %>
     <%= form.submit "記録を保存する" %>
