@@ -2,6 +2,7 @@
 <div class="posts-forms">
     <div class="posts-form">   
         <%= form_with model: @post, url: posts_create_path, class: "post-form" do |form| %>
+            <h1 class="form-name">本日の学習記録</h1>
             <%# 日付 %>
             <%= form.label :date, "日付" %>    
             <div class="date-flex">

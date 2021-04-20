@@ -5,39 +5,50 @@
 // 新規投稿画面のデザイン //
 .posts-forms {
   width: 100%;
-
+  // 入力フォームデザイン
   .posts-form {
     width: 300px;
     margin: 0 auto;
 
+    // 要素を中央寄せ
     .post-form {
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
 
+      // タイトル文字
+      .form-name {
+        font-size: 30px;
+      }
+
+      // 文字間の調節
       label {
         margin-top: 10px;
         margin-bottom: 5px;
       }
 
+      // 2行以上のボックスの大きさを指定し、横方向移動禁止。
       textarea {
         resize: vertical;
         width: auto;
         height: 40px;
       }
 
+      // 日付ボタンの大きさ 3つ
       select {
         width: 60px;
         margin: 10px;
       }
 
+      // 文字を中央寄せ
       .date-flex {
         display: flex;
         flex-direction: row;
         justify-content: center;
       }
 
+      // 送信ボタンの大きさ指定
       .submit {
         margin: 10px auto;
         width: 110px;
