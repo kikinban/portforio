@@ -1,30 +1,36 @@
-<%= form_with model: @post, url: posts_create_path do |form| %>
-    <%# 日付 %>
-    <%= form.label :date, "日付" %>    
-    <%= form.date_select :date %>
-    <%# 学習時間 %>
-    <%= form.label :date, "時間" %>
-    <%= form.number_field :time %>
-    <%# 学習計画 %>
-    <%= form.label :date, "学習計画" %>
-    <%= form.text_field :learning_plan %>
-    <%# 学習内容 %>
-    <%= form.label :date, "学習内容" %>
-    <%= form.text_area :learning_content %>
-    <%# 理解が浅い部分 %>
-    <%= form.label :date, "理解が浅い内容" %>
-    <%= form.text_area :it_took_time %>
-    <%# 解決までに時間を要した内容 %>
-    <%= form.label :date, "解決するまでに時間を要した内容" %>
-    <%= form.text_area :something_felt %>
-    <%# 学習して感じたこと %>
-    <%= form.label :date, "学習して感じたこと" %>
-    <%= form.text_area :notices %>
-    <%# 特記事項 %>
-    <%= form.label :date, "明日の学習計画" %>
-    <%= form.text_area :tomorrow %>
-    <%# 送信ボタン %>
-    <%= form.submit "記録を保存する" %>
 
-
-<% end %>
+<div class="posts-forms">
+    <div class="posts-form">   
+        <%= form_with model: @post, url: posts_create_path, class: "post-form" do |form| %>
+            <%# 日付 %>
+            <%= form.label :date, "日付" %>    
+            <div class="date-flex">
+                <%= form.date_select :date, 
+                    {:start_year => Time.now.year, :end_year => Time.now.year + 2, :minute_step => 10 }%>
+            </div>
+            <%# 学習時間 %>
+            <%= form.label :time, "時間" %>
+            <%= form.number_field :time %>
+            <%# 学習計画 %>
+            <%= form.label :learning_plan, "学習計画" %>
+            <%= form.text_field :learning_plan %>
+            <%# 学習内容 %>
+            <%= form.label :learning_content, "学習内容" %>
+            <%= form.text_area :learning_content %>
+            <%# 理解が浅い部分 %>
+            <%= form.label :it_took_time, "理解が浅い内容" %>
+            <%= form.text_area :it_took_time %>
+            <%# 解決までに時間を要した内容 %>
+            <%= form.label :something_felt, "解決するまでに時間を要した内容" %>
+            <%= form.text_area :something_felt %>
+            <%# 学習して感じたこと %>
+            <%= form.label :notices, "学習して感じたこと" %>
+            <%= form.text_area :notices %>
+            <%# 特記事項 %>
+            <%= form.label :tomorrow, "明日の学習計画" %>
+            <%= form.text_area :tomorrow %>
+            <%# 送信ボタン %>
+            <%= form.submit "記録を保存する",{class: "submit"} %>
+        <% end %>
+    </div>
+</div>
