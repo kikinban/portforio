@@ -1,3 +1,47 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// 新規投稿画面のデザイン //
+.posts-forms {
+  width: 100%;
+
+  .posts-form {
+    width: 300px;
+    margin: 0 auto;
+
+    .post-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      label {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+
+      textarea {
+        resize: vertical;
+        width: auto;
+        height: 40px;
+      }
+
+      select {
+        width: 60px;
+        margin: 10px;
+      }
+
+      .date-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .submit {
+        margin: 10px auto;
+        width: 110px;
+      }
+    }
+  }
+}
