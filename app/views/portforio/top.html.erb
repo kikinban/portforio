@@ -1,70 +1,63 @@
-<html>
-    <%# メインタイトル文字 %>
-    <div class="main-title">
-        <img src="/max_main.png" alt="">
-        <div id="box_fixed">
-            <div class="titles">
-                <h1>PORTFORIO</h1>
-                <p>By&nbsp;Misa&nbsp;Kohata</p>
-            </div>
+
+<%# メインタイトル文字 %>
+<div id="box-fixed">
+    <div class="box-title">
+        <div class="titles">
+            <h1>PORTFORIO</h1>
         </div>
     </div>
+    <img class="main-image" src="/max_main.png" alt="">
+</div>
 
-    <%# 全体コンテンツ（2部構成 %>
-    <div class="top-contents">
-        <%# レポートコンテンツ %>
-        <div class="each-contents-1">
-            <div class="reports">
-                <h2>Reports</h2>
-                <p>今まで勉強した内容をまとめました。</p>
+
+
+<%# 全体コンテンツ（2部構成 %>
+<div class="top-contents">
+    <%# レポートコンテンツ %>
+    <div class="each-contents-1">
+        <div class="reports">
+            <h2><%= link_to("Reports", "/report", class: "header-link") %></h2>
+            <span id="reports-line-1"></span>
+            <span id="reports-line-2"></span>
+            <p>今まで勉強した内容をまとめました。</p>
+            <p class="year-number-1">↓ 2020年10月~ ↓</p>
+            <ul>
+                <% @months_2020.each do |month| %>
+                <li class="report-1">
+                    <img id="flower" src="/hanawaku.png" alt="">
+                    <p class="october"><%= link_to(month,"posts/index?year=#{+@year_2020.to_s}&month="+month.to_s)%></p>
+                </li>
+                <% end %>
+            </ul>
+            <p class="year-number-2">↓ 2021年1月~ ↓</p>
+            <ul>
+                <% @months_2021.each do |month| %>
+                <li class="report-1">
+                    <img id="flower" src="/hanawaku.png" alt="">
+                    <p class="october"><%= link_to(month,"posts/index?year=#{+@year_2021.to_s}&month="+month.to_s)%></p>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+    
+    <%# ワークコンテンツ %>
+    <div class="each-contents-2">
+        <div class="works">
+            <div class="work">
+                <h2 class="work-title"><%= link_to("Works", "/work", class: "header-link") %></h2>
+                <span id="works-line-1"></span>
+                <span id="works-line-2"></span>
+                <p>作品を作ってみました</p>
                 <ul>
-                    <li class="report-1">
-                        <img id="flower" src="/hanawaku.png" alt="">
-                        <p id="october">10月</p>
-                    </li>
-                    <li class="report-2">
-                        <img id="flower" src="/hanawaku.png" alt="">
-                        <p id="november">11月</p>
-                    </li>
-                    <li class="report-3">
-                        <img id="flower" src="/hanawaku.png" alt="">
-                        <p id="december">12月</p>
-                    </li>
-                    <li class="report-4">
-                        <img id="flower" src="/hanawaku.png" alt="">
-                        <p id="january">1月</p>
-                    </li>
-                    <li class="report-5">
-                        <img id="flower" src="/hanawaku.png" alt="">
-                        <p id="february">2月</p>
-                    </li>
-                    <li class="report-6">
-                        <img id="flower" src="/hanawaku.png" alt="">
-                        <p id="march">3月</p>
-                    </li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
                 </ul>
-            </div>
-        </div>
-        
-        <%# ワークコンテンツ %>
-        <div class="each-contents-2">
-            <div class="works">
-                <div class="work">
-                    <h2>Works</h2>
-                    <p>作品を作ってみました</p>
-                    <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    </ul>
-                <div>
-            </div>
+            <div>
         </div>
     </div>
-
-
-</html>
-
+</div>
