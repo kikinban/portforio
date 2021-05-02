@@ -1,0 +1,259 @@
+/*------------------------------------------------------------------------
+
+トップページcssファイル
+このファイル内はスマホ画面を基準として記述している
+480以上の画面サイズはブレイクポイントごとにcssファイルが存在する
+
+--------------------------------------------------------------------------*/
+
+/*----- ベースとなるカラーコード -----*/
+@import "other/base_color";
+
+/*----- ヘッダーとフッターの間 -----*/
+main {
+  width: 100%;
+}
+
+/*-------------------------------------------------------------------------
+メイン画面
+--------------------------------------------------------------------------*/
+
+#box-fixed {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  /* タイトル文字配置ボックス */
+  .box-title {
+    height: 81%;
+    width: 74%;
+    position: absolute;
+    top: 0;
+    /* タイトルボックス */
+    .titles {
+      position: absolute;
+      width: 67%;
+      height: 34%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+
+      h1 {
+        font-size: 2.5em;
+        text-shadow: 0px 1px 1px #424a50;
+        font-weight: 100;
+        color: $cblue;
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  /* メイン画像 */
+  .main-image {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.7;
+  }
+}
+
+/*-------------------------------------------------------------------------
+コンテンツ（レポート・ワーク）
+--------------------------------------------------------------------------*/
+
+/* コンテンツタイトル文字 */
+.top-contents {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 61%;
+  margin: 10px 0px;
+
+  /* (共通)レポート・ワークタイトル文字 */
+  h2 {
+    font-size: 1.9em;
+    font-weight: 100;
+    margin: 0px 0px 5px 0px;
+    color: $cblue;
+  }
+
+  p {
+    color: $cblue;
+    font-weight: 100;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  /* 月リンク */
+  .header-link {
+    height: 19px;
+    color: $cblue;
+    text-decoration: none;
+    /* クリック関連 */
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: $cblue;
+    }
+  }
+
+  /* ---- レポート関連 ---- */
+  .each-contents-1 {
+    text-align: center;
+    position: relative;
+    height: 63%;
+    margin-bottom: 10px;
+
+    .reports {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      /* 2020年・2021年 文字サイズ */
+      .year-number-1 {
+        font-size: 1.2em;
+      }
+
+      .year-number-2 {
+        font-size: 1.2em;
+      }
+
+      /* レポート文字 横ライン */
+      #reports-line-1 {
+        width: 33%;
+        height: 2px;
+        display: inline-block;
+        border-top: solid 2px yellowgreen;
+        position: absolute;
+        top: 4%;
+        left: 10px;
+      }
+
+      #reports-line-2 {
+        width: 33%;
+        height: 2px;
+        display: inline-block;
+        border-top: solid 2px yellowgreen;
+        position: absolute;
+        top: 4%;
+        right: 10px;
+      }
+
+      /* 月ごとリスト */
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        /* クリック関連 */
+        .october {
+          a {
+            text-decoration: none;
+            color: $cblue;
+            font-size: 1.2em;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &:active {
+            text-decoration: none;
+          }
+
+          &:visited {
+            color: $cblue;
+          }
+        }
+        /* レポートリスト関連 */
+        li {
+          position: relative;
+          margin: 0px 20px 5px 20px;
+          /* 月名を花枠内に中央寄せ */
+          p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+            font-weight: bolder;
+          }
+          /* 花枠画像 */
+          img {
+            width: 63.3px;
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ---- ワーク関連 ---- */
+  .each-contents-2 {
+    text-align: center;
+    position: relative;
+    height: 40%;
+
+    /* ワークタイトル文字 横ライン */
+    #works-line-1 {
+      width: 32%;
+      height: 2px;
+      display: inline-block;
+      border-top: solid 2px yellowgreen;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    #works-line-2 {
+      width: 32%;
+      height: 2px;
+      display: inline-block;
+      border-top: solid 2px yellowgreen;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    /* 四角リスト */
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+
+      li {
+        width: 60px;
+        height: 60px;
+        border: 2px solid pink;
+        margin: 0px 20px 5px 20px;
+      }
+    }
+  }
+}
+
+// ~ デバイスの大きさに合わせて適用される ~
+
+//スマホを横に傾けた時に適用
+@import "style/breakpoints/480up";
+
+// //タブレットに適用
+@import "style/breakpoints/600up";
+
+// //小さいディスプレイやノートpc
+@import "style/breakpoints/960up";
+
+// //pcディスプレイ
+@import "style/breakpoints/1280up";

@@ -3,3 +3,187 @@
 Stylesheet: 960px以上のモニタで適用
 
 ******************************************************************/
+/*----- 固定カラー -----*/
+@import "other/base_color";
+
+@media screen and (min-width: 960px) {
+  /*-----------------------------------------------------------
+  トップページ
+  ------------------------------------------------------------*/
+
+  /*----- ヘッダー -----*/
+  header {
+    /* ナビゲーションリスト */
+    aside nav #header-list {
+      font-size: 18px;
+    }
+  }
+  /*----- タイトル文字の枠調整 -----*/
+  body #box-fixed .box-title .titles {
+    width: 46%;
+    height: 19%;
+
+    h1 {
+      font-size: 5.5em;
+    }
+  }
+  /*----- レポートコンテンツ -----*/
+  .top-contents {
+    margin: 10px 80px;
+    width: auto;
+    .each-contents-1 .reports {
+      h2 {
+        font-size: 3em;
+        margin-bottom: 10px;
+      }
+      /* レポートタイトル左右に配置する線の調節 */
+      #reports-line-1 {
+        top: 6%;
+      }
+      #reports-line-2 {
+        top: 6%;
+      }
+
+      p {
+        font-size: 1.4em;
+      }
+
+      /* 西暦タイトル */
+      .year-number-1 {
+        font-size: 1.6em;
+      }
+
+      .year-number-2 {
+        font-size: 1.6em;
+      }
+
+      /* 花枠画像 */
+      ul li img {
+        width: 103.3px;
+        height: 103px;
+      }
+
+      ul li {
+        margin: 0px 20px 5px 20px;
+      }
+    }
+  }
+  /*----- ワークコンテンツ -----*/
+  .each-contents-2 .work {
+    h2 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 2.4em;
+    }
+    /* レポートタイトル左右に配置する線の調節 */
+    #works-line-1 {
+      width: 40%;
+      top: 12%;
+    }
+    #works-line-2 {
+      width: 40%;
+      top: 12%;
+    }
+    /* リスト */
+    ul li {
+      width: 103px;
+      height: 103px;
+      margin: 0px 20px 5px 20px;
+    }
+  }
+
+  /* ---------------------------------------------------------
+  トップページ以外のh1指定
+  -----------------------------------------------------------*/
+  body .all-title {
+    font-size: 5em;
+    margin: 60px 0px;
+  }
+
+  /*-------------------------------------------------------------
+  プロフィールページ
+  --------------------------------------------------------------*/
+
+  /*----- プロフィール詳細 -----*/
+  .profiles {
+    margin: 20px 80px;
+
+    li {
+      font-size: 18px;
+    }
+    /* （タイトル）私について */
+    .about {
+      font-size: 25px;
+      width: 125px;
+    }
+
+    /*----- 経歴 -----*/
+    .careers {
+      /* タイトル */
+      .career-title {
+        font-size: 25px;
+        width: 50px;
+      }
+      /* 保育士歴 */
+      .year {
+        font-size: 14px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    /* 3つのリスト調節 */
+    .left-pro-li {
+      margin: 0px 10px;
+    }
+
+    .right-pro-li {
+      margin: 0px 10px;
+    }
+    /* 業務内容 */
+    .careers #career ul li {
+      font-size: 18px;
+      margin: 10px 10px;
+    }
+  }
+
+  /*---------------------------------------------------------------
+  学習記事一覧ページ
+  ---------------------------------------------------------------*/
+
+  .main-posts-index {
+    .container {
+      .posts-index-date {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .interval-1 {
+          margin: 0;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  /*-----------------------------------------------------------------
+  学習記録記事一覧
+  -----------------------------------------------------------------*/
+
+  .posts-index-date {
+    margin: 20px 80px;
+    width: auto;
+  }
+
+  /*-----------------------------------------------------------------
+  フッター
+  -----------------------------------------------------------------*/
+
+  /*----- フッターリスト -----*/
+  footer #foo-title-960 li {
+    font-size: 18px;
+  }
+}

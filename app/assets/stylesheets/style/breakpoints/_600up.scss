@@ -3,25 +3,314 @@
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
-
-@import 'other/base_color';
+/*----- 固定カラー -----*/
+@import "other/base_color";
 
 @media screen and (min-width: 600px) {
+  /*-----------------------------------------------------------
+  左右に余白を設定
+  ------------------------------------------------------------*/
+  .top-contents {
+    margin: 0px 40px;
+    width: auto;
+  }
 
-    main .main-title {
-        height: 312.3px;
+  /*-----------------------------------------------------------
+  トップページ
+  ------------------------------------------------------------*/
 
-        & #box_fixed {
-        height: 81%;
-        
-            & .titles h1 {
-                font-size: 60px;
-            }
-
-            & .titles p {
-                font-size: 20px;
-            }
-        }
+  /*----- ヘッダー -----*/
+  header {
+    /* ロゴアイコン */
+    #logo-960 {
+      img {
+        height: 35px;
+      }
     }
 
+    /* ハンバーガーメニューアイコンを非表示 */
+    .open {
+      display: none;
+    }
+
+    /* 隠れているナビゲーションを表示する */
+    aside {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: none;
+      height: auto;
+      /* ナビゲーション位置調節 */
+      nav ul {
+        display: flex;
+        justify-content: flex-end;
+        /* 下線を非表示 */
+        #header-list {
+          border-bottom: none;
+
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+    /* ☓ボタン非表示 */
+    .close-line {
+      display: none;
+    }
+  }
+
+  /*----- タイトル文字の枠調整 -----*/
+  body #box-fixed {
+    margin-top: 20px;
+    .box-title .titles {
+      width: 63%;
+      height: 30%;
+
+      h1 {
+        font-size: 4.5em;
+      }
+    }
+  }
+
+  /*----- レポートコンテンツ -----*/
+  .top-contents {
+    margin: 10px 40px;
+    width: auto;
+    .each-contents-1 .reports {
+      h2 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+      /* レポートタイトル左右に配置する線の調節 */
+      #reports-line-1 {
+        top: 4%;
+        width: 36%;
+      }
+      #reports-line-2 {
+        top: 4%;
+        width: 36%;
+      }
+      p {
+        font-size: 1.4em;
+      }
+
+      /* 西暦タイトル */
+      .year-number-1 {
+        font-size: 1.6em;
+      }
+
+      .year-number-2 {
+        font-size: 1.6em;
+      }
+
+      /* 花枠画像 */
+      ul li img {
+        width: 83.3px;
+        height: 80px;
+      }
+    }
+
+    /*----- ワークコンテンツ -----*/
+    .each-contents-2 {
+      .work {
+        h2 {
+          font-size: 2.5em;
+        }
+        p {
+          font-size: 1.4em;
+        }
+
+        /* レポートタイトル左右に配置する線の調節 */
+        #works-line-1 {
+          width: 40%;
+          top: 12%;
+        }
+        #works-line-2 {
+          width: 40%;
+          top: 12%;
+        }
+      }
+    }
+  }
+  .top-contents .each-contents-2 ul {
+    margin-top: 10px;
+    li {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  /* ---------------------------------------------------------
+  トップページ以外のh1指定
+  -----------------------------------------------------------*/
+  body .all-title {
+    font-size: 4em;
+    margin: 45px 0px;
+  }
+  /*-------------------------------------------------------------
+  プロフィールページ
+  --------------------------------------------------------------*/
+
+  /*----- プロフィール詳細 -----*/
+  .profiles {
+    margin: 10px 40px;
+
+    /* （タイトル）私について */
+    .about {
+      font-size: 20px;
+      width: 100px;
+    }
+
+    /*----- 経歴 -----*/
+    .careers {
+      /* タイトル */
+      .career-title {
+        font-size: 20px;
+        width: 40px;
+      }
+      /* 保育士歴 */
+      .year {
+        font-size: 14px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+    }
+    /* 3つのリスト調節 */
+    .left-pro-li {
+      margin: 0px 10px;
+    }
+
+    .right-pro-li {
+      margin: 0px 10px;
+    }
+
+    /* 業務内容 */
+    .careers #career ul li {
+      font-size: 16px;
+      margin: 10px 10px;
+    }
+  }
+
+  /*-------------------------------------------------------------
+  レポートページ
+  --------------------------------------------------------------*/
+
+  /*----- 新規登録・全記録一覧リンク -----*/
+  .report-link {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+
+    a {
+      font-size: 1.6em;
+      color: $cblue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: $cblue;
+      }
+
+      &:active {
+        text-decoration: none;
+      }
+
+      &:visited {
+        color: $cblue;
+      }
+    }
+
+    p {
+      margin: 0px 10px;
+      display: inline-block;
+    }
+  }
+
+  /*----- レポートコンテンツ -----*/
+  .each-contents-1 .reports {
+    /* 2020年・2021年 文字サイズ */
+    .year-number-1 {
+      font-size: 100%;
+      margin: 10px;
+    }
+
+    .year-number-2 {
+      font-size: 100%;
+      margin: 10px;
+    }
+
+    /* リスト文字 */
+    ul #october {
+      a {
+        font-size: 100%;
+      }
+    }
+
+    ul li img {
+      width: 83.3px;
+      height: 83px;
+    }
+  }
+
+  /*-----------------------------------------------------------------
+  新規記録記事
+  -----------------------------------------------------------------*/
+
+  .posts-forms .posts-form .post-form {
+    font-size: 1.6em;
+  }
+
+  /*-----------------------------------------------------------------
+  学習記録記事データ
+  -----------------------------------------------------------------*/
+
+  .study-records {
+    h1 {
+      font-size: 40px;
+      margin: 40px;
+    }
+
+    p {
+      font-size: 100%;
+    }
+  }
+
+  /*-----------------------------------------------------------------
+  学習記録記事一覧
+  -----------------------------------------------------------------*/
+
+  .posts-index-date {
+    margin: 10px 40px;
+    width: auto;
+  }
+
+  /*-----------------------------------------------------------------
+  フッター
+  -----------------------------------------------------------------*/
+
+  footer {
+    border-top: 0;
+
+    /*----- このモニタサイズからフッターを横に表示 -----*/
+    #foo-title-960 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      li {
+        text-align: center;
+        width: auto;
+        margin: 0px 20px;
+        border-bottom: 0;
+      }
+      /* 三角を非表示 */
+      .triangle {
+        display: none;
+      }
+    }
+  }
 }

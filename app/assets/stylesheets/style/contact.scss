@@ -2,7 +2,7 @@
 /* コンタクトページcss */
 
 /* ---- 文字配置 ---- */
-.contact-title {
+.all-title {
   text-align: center;
   margin-bottom: 10px;
 
@@ -22,6 +22,7 @@
   & #contact-form {
     text-align: center;
     margin: 20px 10px 0px 10px;
+    font-size: 1.4em;
 
     & .forms {
       margin-bottom: 10px;

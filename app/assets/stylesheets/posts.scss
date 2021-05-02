@@ -2,12 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-// 新規投稿画面のデザイン //
+@import "other/base_color";
+
+// ---- 新規投稿画面のデザイン ---- //
 .posts-forms {
   width: 100%;
   // 入力フォームデザイン
   .posts-form {
-    width: 300px;
+    width: 80%;
     margin: 0 auto;
 
     // 要素を中央寄せ
@@ -15,7 +17,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      text-align: center;
+      font-size: 1.4em;
 
       // タイトル文字
       .form-name {
@@ -52,6 +54,71 @@
       .submit {
         margin: 10px auto;
         width: 110px;
+      }
+    }
+  }
+}
+
+// ---- データ記録ページ ---- //
+.study-record {
+  h1 {
+    font-size: 30px;
+    margin: 25px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px 20px;
+    border-bottom: solid 2px $pink;
+
+    span {
+      font-weight: 100;
+      margin-left: 20px;
+    }
+  }
+
+  .record-box-1 {
+    height: 50px;
+    margin: 0 20px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+  }
+
+  .record-box-2 {
+    height: 300px;
+    margin: 0 20px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+  }
+
+  .record-box-3 {
+    height: 200px;
+    margin: 0 20px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+  }
+}
+
+/*---------------------------------------------------------------
+学習記事一覧ページ
+---------------------------------------------------------------*/
+
+.main-posts-index {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .posts-index-date {
+      text-align: center;
+
+      .interval-1 {
+        border-bottom: solid 2px $pink;
+        padding-bottom: 10px;
+        margin: 10px;
       }
     }
   }

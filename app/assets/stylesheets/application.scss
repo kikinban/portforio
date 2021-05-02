@@ -22,22 +22,32 @@
 //ベースとなるカラーコード
 @import "other/base_color";
 
+/* ----------     共通ヘッダー     ---------- */
 body {
   font-family: "Kiwi Maru", serif;
+  font-size: 62.5%;
   font-weight: 300;
   width: 100%;
-  height: 890px;
+  height: 100vh;
   background-color: $main;
-}
+  color: $cblue;
 
-/* 共通ヘッダー */
-body {
-  /* ---- ハンバーガーメニュー配置 ---- */
-  & header {
+  /* ハンバーガーメニュー配置 */
+  header {
     height: 40px;
+
+    .logo-icon {
+      padding: 10px 0px 0px 10px;
+
+      img {
+        width: auto;
+        height: 20px;
+        vertical-align: top;
+      }
+    }
   }
   /* アイコン配置 */
-  & .open {
+  .open {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -47,7 +57,7 @@ body {
   }
 
   /* アイコンデザイン */
-  & .open-line {
+  .open-line {
     border-top: 2px solid $cblue;
     width: 15px;
     height: 3px;
@@ -55,14 +65,14 @@ body {
   }
 
   /* チェックボックスを隠す */
-  & input[type="checkbox"] {
+  input[type="checkbox"] {
     position: absolute;
     right: -50vh;
     display: none;
   }
 
   /* 出てくるヘッダー（リスト） */
-  & aside {
+  aside {
     position: absolute;
     right: -80%;
     height: 100%;
@@ -71,45 +81,42 @@ body {
     background-color: #fffef5;
     z-index: 99;
 
-    & nav {
+    nav {
       margin: 10px 10px 0px 10px;
 
-      & #header-list {
+      #header-list {
         padding: 10px;
-        font-size: 15px;
+        font-size: 1.5em;
         text-align: center;
         border-bottom: 1px solid $cblue;
 
-        & img {
+        a {
+          text-decoration: none;
+          color: $cblue;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &:active {
+            text-decoration: none;
+          }
+
+          &:visited {
+            color: $cblue;
+          }
+        }
+
+        img {
           width: 15px;
           height: auto;
-        }
-      }
-
-      & .header-link {
-        text-decoration: none;
-        color: $cblue;
-
-        &:visited {
-          text-decoration: none;
-          color: $cblue;
-        }
-
-        &:hover {
-          text-decoration: none;
-          color: $cblue;
-        }
-
-        &:active {
-          text-decoration: none;
-          color: $cblue;
         }
       }
     }
   }
 
   /* ×ボタン表示 */
-  & .close-line {
+  .close-line {
     border-top: 2px solid $cblue;
     width: 15px;
     display: inline-block;
@@ -119,26 +126,26 @@ body {
   }
 
   /* ×ボタンの線回転 */
-  & #line-1 {
+  #line-1 {
     transform: rotate(-45deg);
   }
 
-  & #line-2 {
+  #line-2 {
     transform: rotate(45deg);
   }
 
   /* クリック時に、リスト表示が右寄りに配置 */
-  & input[type="checkbox"]:checked ~ aside {
+  input[type="checkbox"]:checked ~ aside {
     right: 0;
   }
 
   /* クリック時にアイコンが消える */
-  & input[type="checkbox"]:checked ~ .open {
+  input[type="checkbox"]:checked ~ .open {
     display: none;
   }
 
   /* クリック時に出てくる半透明の画面 */
-  & input[type="checkbox"]:checked ~ .back {
+  input[type="checkbox"]:checked ~ .back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -146,182 +153,47 @@ body {
     opacity: 0.5;
     z-index: 99;
   }
-}
 
-/* トップページ */
-
-/* メインタイトル */
-.main-title {
-  height: 144.22px;
-  position: relative;
-
-  /* タイトル固定ボックス */
-  & #box_fixed {
-    width: 74%;
-    height: 58%;
-    position: relative;
-
-    /* 文字位置調節 */
-    & .titles {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-
-      /* メインタイトル */
-      & h1 {
-        font-size: 30px;
-        text-shadow: 0px 1px 1px #424a50;
-        font-weight: 100;
-        color: $cblue;
-        position: relative;
-        display: inline-block;
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 50%;
-          display: inline-block;
-          bottom: -10px;
-          width: 143.76px;
-          height: 2px;
-          -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-          background-color: $pink;
-        }
-      }
-
-      /* タイトル文字下 */
-      & p {
-        font-size: 10px;
-        position: relative;
-        top: 15px;
-        text-align: center;
-        color: $cblue;
-      }
-    }
+  /*-------------------------------------------------------
+  トップページ以外のh１・p指定
+  -------------------------------------------------------*/
+  .all-title {
+    font-size: 3em;
+    margin: 20px 0px;
+    text-align: center;
   }
 
-  /* メイン背景 */
-  & img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    opacity: 0.7;
+  .description {
+    font-size: 1.4em;
+    text-align: center;
   }
 }
 
-/* 全体コンテンツ */
-main {
-  .top-contents {
-    height: 590px;
-    position: relative;
-
-    /* レポート配置 */
-    & .each-contents-1 {
-      height: 297px;
-      text-align: center;
-
-      & .reports {
-        display: inline-block;
-
-        /* 月ごとリスト */
-        & ul {
-          list-style: none;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-
-          & li {
-            position: relative;
-            margin: 20px;
-
-            & p {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-              font-size: 15px;
-              font-weight: bolder;
-            }
-
-            & img {
-              width: 73.3px;
-              height: 70px;
-            }
-          }
-        }
-      }
-    }
-
-    /* ワーク部分 */
-    & .each-contents-2 {
-      height: 293px;
-      text-align: center;
-
-      & ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-
-        & li {
-          width: 70px;
-          height: 70px;
-          border: 2px solid pink;
-          margin: 20px;
-        }
-      }
-    }
-
-    /* レポート・ワークタイトル文字 */
-    & h2 {
-      font-size: 20px;
-      font-weight: 100;
-      margin: 10px 0px;
-      color: $cblue;
-    }
-
-    & p {
-      color: $cblue;
-      font-weight: 100;
-      font-size: 15px;
-      margin-bottom: 20px;
-    }
-  }
-}
-
-/* 共通フッダー */
+/* ----------     共通フッター     ---------- */
 footer {
-  width: 100%;
-  height: 50px;
+  margin: 0px 10px 0px 10px;
+  border-top: solid 2px yellowgreen;
 
-  & ul#foo_title {
+  ul.foo_title {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     list-style: none;
+    bottom: 0;
 
     & > li {
+      width: 355px;
       font-size: 15px;
-      margin: 5px 30px;
       color: $cblue;
+      border-bottom: solid 2px yellowgreen;
+      padding: 5px 0px;
+      width: 100%;
     }
   }
 
-  & p {
-    color: $cblue;
-    font-size: 10px;
+  #copywriter {
+    font-size: 12px;
     text-align: center;
-    margin-top: 10px;
+    margin: 5px 0px;
   }
 }
 
