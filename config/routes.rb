@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"
+  get "posts/months" => "posts#months"
+  get "posts/:id" => "posts#show"
 
  # 主要ページ関連
   get "/" => "portforio#top"
