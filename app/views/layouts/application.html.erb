@@ -15,6 +15,7 @@
   <body>
     <%# 共通ヘッダー %>
     <header>
+      <p id="logo-960" class="logo-icon"><%= link_to("/") do %><%= image_tag '/logo-icon.png' %><% end %></p>
       <input id="menu" type="checkbox">
       <label for="menu" class="open">
           <span class="open-line"></span>
@@ -32,7 +33,6 @@
             <li id="header-list"><%= link_to("PROFILE", "/profile", class: "header-link") %></li>
             <li id="header-list"><%= link_to("REPORTS", "/report", class: "header-link") %></li>
             <li id="header-list"><%= link_to("WORKS", "/work", class: "header-link") %></li>
-            <li id="header-list"><%= link_to("CONTACT", "/contact", class: "header-link") %></li>
             <li id="header-list">
               <%= link_to("https://www.instagram.com/?hl=ja", class: "header-link") do %>
                 <%= image_tag '/insta.png' %>
@@ -54,14 +54,13 @@
 
     <%# 共通フッター %>
     <footer>
-        <ul id="foo_title">
-          <li>TOP</li>
-          <li>PROFIILE</li>
-          <li>REPORTS</li>
-          <li>WORKS</li>
-          <li>CONTACT</li>
+        <ul id="foo-title-960"class="foo_title">
+          <li><span class="triangle">▶</span>TOP</li>
+          <li><span class="triangle">▶</span>PROFIILE</li>
+          <li><span class="triangle">▶</span>REPORTS</li>
+          <li><span class="triangle">▶</span>WORKS</li>
         </ul>
-        <p>© 2021 Kohata Misa</p>
+        <p id="copywriter">© 2021 Kohata Misa</p>
     </footer>
   </body>
 </html>
