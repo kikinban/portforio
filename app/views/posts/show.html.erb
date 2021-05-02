@@ -1,0 +1,33 @@
+<div class="study-record">
+    <h1>学習記録</h1>
+    <p>日付:<span><%= @post.date %></span></p>
+    <p>学習時間:<span><%= @post.time %>時間</span></p>
+    <div>
+        <p>学習計画（予定）</p>
+        <div class="record-box-1"><%= @post.learning_plan %></div>
+    </div>
+    <div>
+        <p>学習内容</p>
+        <div class="record-box-2"><%= @post.learning_content %></div>
+    </div>
+    <div>
+        <p>理解が浅い内容</p>
+        <div class="record-box-3"><%= @post.understandable %></div>
+    </div>
+    <div>
+        <p>解決するまでに時間を要した内容</p>
+        <div class="record-box-3"><%= @post.it_took_time %></div>
+    </div>
+    <div>
+        <p>学習して感じたこと</p>
+        <div class="record-box-3"><%= @post.something_felt %></div>
+    </div>
+    <div>
+        <p>特記事項</p>
+        <div class="record-box-1"><%= @post.notices %></div>
+    </div>
+    <div>
+        <p>次回の学習計画</p>
+        <div class="record-box-1"><%= @post.tomorrow %></div>
+    </div>
+</div>

@@ -1,16 +1,12 @@
 
-<div class="main posts-index">
+<div class="main-posts-index">
   <div class="container">
-    <% @posts.each do |post| %>
-      <div class="posts-index-item">
-        <%= post.date %>
-        <%= post.time%>
-        <%= post.learning_plan %>
-        <%= post.learning_content %>
-        <%= post.it_took_time %>
-        <%= post.something_felt %>
-        <%= post.tomorrow %>
-      </div>
-    <% end %>
+    <h1 class="all-title">Study Records</h1>
+    <div class="posts-index-date">
+        <% @posts.each do |post| %> 
+          <p class="interval-1"><%= link_to(post.date, "/posts/#{post.id}") %> </p>
+        <% end %>
+
+    </div>
   </div>
 </div>
