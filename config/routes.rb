@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post "posts/create" => "posts#create"
   get "posts/months" => "posts#months"
   get "posts/:id" => "posts#show"
+  get "posts/:id/edit" => "posts#edit"
+  patch "posts/:id/update" => "posts#update"
+  delete "posts/:id/destroy" => "posts#destroy"
 
  # 主要ページ関連
   get "/" => "portforio#top"
