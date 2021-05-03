@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_21_144902) do
+ActiveRecord::Schema.define(version: 2021_05_03_095325) do
 
   create_table "posts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.date "date"
     t.integer "time"
+    t.integer "minute"
     t.string "learning_plan"
     t.text "learning_content"
     t.text "understandable"

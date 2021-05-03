@@ -1,12 +1,11 @@
-
 <div class="posts-forms">
-    <h1 class="all-title">New Record</h1>
+    <h1 class="all-title">Edit Record</h1>
     <div class="posts-form">   
-        <%= form_with model: @post, url: posts_create_path, class: "post-form" do |form| %>
+        <%= form_with model: @post, url: "/posts/#{@post.id}/update", class: "post-form" do |form| %>
             <%# 日付 %>
             <%= form.label :date, "日付" %>    
             <%= form.date_field :date %>
-            <%# 学習時間(1時間単位) %>
+            <%# 学習時間 %>
             <%= form.label :time, "時間" %>
             <%= form.number_field :time %>
             <%# 学習時間（1分単位） %>
@@ -33,8 +32,8 @@
             <%# 明日の学習計画 %>
             <%= form.label :tomorrow, "明日の学習計画" %>
             <%= form.text_area :tomorrow %>
-            <%# 送信ボタン %>
-            <%= form.submit "記録を保存する",{class: "submit"} %>
+            <%# 保存ボタン %>
+            <%= form.submit "編集した内容を保存する",{class: "submit"} %>
         <% end %>
     </div>
 </div>

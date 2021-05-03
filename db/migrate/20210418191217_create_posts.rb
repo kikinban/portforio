@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration[6.1]
     create_table :posts do |t|
       t.date :date
       t.integer :time
+      t.integer :minute
       t.string :learning_plan
       t.text :learning_content
       t.text :understandable
