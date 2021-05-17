@@ -1,33 +1,94 @@
-
-<div class="report-link">
-    <p><%= link_to("新規記録","/posts/new")%></p>
-    <p><%= link_to("全記録一覧","/posts/index")%></p>
-</div>
-<div class="report-title">
-    <h1 class="all-title">REPORTS</h1>
-    <p class="description">勉強した内容をまとめました</p>       
-</div>
-<%# ---- メインレポート画面 ---- %>
-
-<div class="each-contents-1">
-            <div class="reports">
-                <p class="year-number-1">↓ 2020年10月~ ↓</p>
-                <ul>
-                    <% @months_2020.each do |month| %>
-                    <li class="report-1">
-                        <img id="flower" src="/hanawaku.png" alt="">
-                        <p id="october"><%= link_to(month,"posts/months?year=#{+@year_2020.to_s}&month="+month.to_s)%></p>
-                    </li>
-                    <% end %>
-                </ul>
-                <p class="year-number-2">↓ 2021年1月~ ↓</p>
-                <ul>
-                    <% @months_2021.each do |month| %>
-                    <li class="report-1">
-                        <img id="flower" src="/hanawaku.png" alt="">
-                        <p id="october"><%= link_to(month,"posts/months?year=#{+@year_2021.to_s}&month="+month.to_s)%></p>
-                    </li>
-                    <% end %>
-                </ul>
-            </div>
+<div class="margin">
+    <%# ---- 新規投稿ボタン ---- %>
+    <div class="new-input">
+        <%= link_to("/posts/new", class: "new-image") do %><%= image_tag("/new.png") %><% end %>
+        <%= link_to("新規記録","/posts/new", class:"new-none") %>
+    </div>
+    <%# ---- タイトル ---- %>
+    <div class="report-title">
+        <h1 class="all-title">REPORTS</h1>
+    </div>
+    <%# ---- 学習内容・参考書籍 ---- %>
+    <div class="report-tables">
+        <table>
+            <colgroup span="4"></colgroup>
+            <caption>学習内容</caption>
+            <tr>
+                <th>言語</th>
+                <th>教材</th>
+                <th>使用したツール</th>
+            </tr>
+            <tr>     
+                <td>JavaScript</td>
+                <td>Progate</td>
+                <td>GitHub</td>
+            </tr> 
+            <tr>     
+                <td>Ruby</td>
+                <td>Progate</td>
+                <td>Fork</>
+            </tr>
+            <tr>     
+                <td>jQuery</td>
+                <td>Udemy2</td>
+                <td>DeepL</td>
+            </tr>
+            <tr>     
+                <td>React</td>
+                <td>Google検索</td>
+                <td>Docker</td>
+            </tr>
+        </table>
+        <table>
+        <caption>参考書籍</caption>
+        <tr>
+            <th>書籍名</th>
+            <th>著者</th>
+        <tr>
+            <td>なるほどデザイン<br class="table-br"><span class="book-title">~ 目で見て楽しむデザインの本 ~</span></td>
+            <td>筒井 美希</td>
+        </tr>
+        <tr>
+            <td>きれいな色の本<br class="table-br"><span class="book-title">~ デザインと言葉の配色ブック ~</span></td>
+            <td>ingectar</td>
+        </tr>
+        <tr>
+            <td>ITパスポート<br class="table-br"><span class="book-title">~ 2020年版 ~</span></td>
+            <td>きたみ りゅうじ</td>
+        </tr>
+        </table>
+    </div>
+    <%# ---- メインレポート画面 ---- %>
+    <div class="each-contents-1">
+        <%# ---- 学習記録 ---- %>
+        <p class="study-title">学習記録</p>
+        <div class="study-links">
+            <p><%= link_to("/posts/new") do %><%= image_tag("/new_blue.png") %><% end %></p>
+            <p><%= link_to("新規記録","/posts/index")%></p>
+            <p><%= link_to("/posts/index", class: "study-icon" ) do %><%= image_tag("/date.png") %><% end %></p>
+            <p><%= link_to("全記録一覧","/posts/index")%></p>
         </div>
+        <%# ---- 花枠リスト ---- %>
+        <div class="reports">
+            <p class="month-title">学習記録を月ごとにまとめました</p>
+            <p class="year-number-1">↓ 2020年10月~ ↓</p>
+            <ul>
+                <% @months_2020.each do |month| %>
+                <li class="report-1">
+                    <img id="flower" src="/hanawaku.png" alt="">
+                    <p id="october"><%= link_to(month,"posts/months?year=#{+@year_2020.to_s}&month="+month.to_s)%></p>
+                </li>
+                <% end %>
+            </ul>
+            <p class="year-number-2">↓ 2021年1月~ ↓</p>
+            <ul>
+                <% @months_2021.each do |month| %>
+                <li class="report-1">
+                    <img id="flower" src="/hanawaku.png" alt="">
+                    <p id="october"><%= link_to(month,"posts/months?year=#{+@year_2021.to_s}&month="+month.to_s)%></p>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>

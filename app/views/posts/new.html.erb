@@ -3,21 +3,24 @@
     <h1 class="all-title">New Record</h1>
     <div class="posts-form">   
         <%= form_with model: @post, url: posts_create_path, class: "post-form" do |form| %>
-            <%# 日付 %>
-            <%= form.label :date, "日付" %>    
-            <%= form.date_field :date %>
-            <%# 学習時間(1時間単位) %>
-            <%= form.label :time, "時間" %>
-            <%= form.number_field :time %>
-            <%# 学習時間（1分単位） %>
-            <%= form.label :minute, "分" %>
-            <%= form.number_field :minute %>
+            <div class="small-form">
+                <%# 日付 %>
+                <%= form.label :date, "日付：" %>    
+                <%= form.date_field :date ,class: "date-margin" %><br class="form-wrap">
+                <%# 学習時間(1時間単位) %>
+                <%= form.label :time, "勉強時間：" %>
+                <%= form.number_field :time, class: "form-width" %>
+                <%= form.label :time, "時間" %>
+                <%# 学習時間（1分単位） %>
+                <%= form.number_field :minute, class: "form-width" %>
+                <%= form.label :minute, "分" %>
+            </div>
             <%# 学習計画 %>
             <%= form.label :learning_plan, "学習計画" %>
             <%= form.text_field :learning_plan %>
             <%# 学習内容 %>
             <%= form.label :learning_content, "学習内容" %>
-            <%= form.text_area :learning_content %>
+            <%= form.text_area :learning_content, class: "form-content" %>
             <%# 理解が浅い内容 %>
             <%= form.label :understandable, "理解が浅い内容" %>
             <%= form.text_area :understandable %>
