@@ -12,10 +12,10 @@ Stylesheet: 1280px以上のモニタで適用
   ----------------------------------------------------------------*/
   header {
     margin: 0 auto;
-    width: 90%;
+    width: 70%;
 
     aside {
-      right: 5%;
+      right: 15%;
     }
   }
 
@@ -38,11 +38,14 @@ Stylesheet: 1280px以上のモニタで適用
   }
 
   .top-contents {
-    margin: 40px 100px;
+    margin: 40px 15%;
     width: auto;
 
-    .each-contents-1 .reports .record-contents {
-      width: 50%;
+    .each-contents-1 {
+      margin: 0;
+      .reports .record-contents {
+        width: 50%;
+      }
     }
 
     .each-contents-2 {
