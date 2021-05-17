@@ -45,10 +45,10 @@
                 <p class="content-p">2020年10月から、独学で勉強スタート</p>
                 <p class="content-p">学習内容を日ごとに記録</p>
                 <div class="small-icon-list">
-                    <p class="record-icon"><%= link_to("/posts/new") do %><%= image_tag("/new_blue.png") %><% end %></p>
-                    <p class="new-record-icon"><%= link_to("新規記録","/posts/new")%></p>
-                    <p class="record-icon"><%= link_to("/posts/index", class: "study-icon" ) do %><%= image_tag("/date.png") %><% end %></p>
-                    <p><%= link_to("全記録一覧","/posts/index")%></p>
+                    <p class="record-icon"><%= link_to("/study_records/new") do %><%= image_tag("/new_blue.png") %><% end %></p>
+                    <p class="new-record-icon"><%= link_to("新規記録","/study_records/new")%></p>
+                    <p class="record-icon"><%= link_to("/study_records/index", class: "study-icon" ) do %><%= image_tag("/date.png") %><% end %></p>
+                    <p><%= link_to("全記録一覧","/study_records/index")%></p>
                 </div>
                 <p class="frame-img"><%= link_to("/report") do %><%= image_tag("/hanawaku.png") %><% end %></p>
                 <p class="view"><%= link_to("view","/report")%></p>

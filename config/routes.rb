@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
  # 投稿機能関連
-  get "posts/index" => "posts#index"
-  get "posts/new" => "posts#new"
-  post "posts/create" => "posts#create"
-  get "posts/months" => "posts#months"
-  get "posts/:id" => "posts#show"
-  get "posts/:id/edit" => "posts#edit"
-  patch "posts/:id/update" => "posts#update"
-  delete "posts/:id/destroy" => "posts#destroy"
+  get "study_records/index" => "study_records#index"
+  get "study_records/new" => "study_records#new"
+  post "study_records/create" => "study_records#create"
+  get "study_records/months" => "study_records#months"
+  get "study_records/:id" => "study_records#show"
+  get "study_records/:id/edit" => "study_records#edit"
+  patch "study_records/:id/update" => "study_records#update"
+  delete "study_records/:id/destroy" => "study_records#destroy"
 
  # 主要ページ関連
   get "/" => "portforio#top"

@@ -1,7 +1,7 @@
 <div class="posts-forms">
     <h1 class="all-title">Edit Record</h1>
     <div class="posts-form">   
-        <%= form_with model: @post, url: "/posts/#{@post.id}/update", class: "post-form" do |form| %>
+        <%= form_with model: @post, url: "/study_records/#{@post.id}/update", class: "post-form" do |form| %>
             <%# 日付 %>
             <%= form.label :date, "日付" %>    
             <%= form.date_field :date %>

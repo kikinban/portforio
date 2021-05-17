@@ -1,4 +1,4 @@
-class Post < ApplicationRecord
+class StudyRecord < ApplicationRecord
     # ---- バリデーション設定 ----
     validates :date, :time, :minute, :learning_plan, :learning_content, :understandable, :it_took_time, :something_felt, :notices, :tomorrow,
     {presence: true}

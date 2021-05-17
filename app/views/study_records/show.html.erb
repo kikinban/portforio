@@ -30,7 +30,7 @@
         <p>次回の学習計画</p>
         <div class="record-box-1"><%= @post.tomorrow %></div>
     </div>
-    <p><%= link_to("編集する", "/posts/#{@post.id}/edit") %></p>
-    <p><%= link_to("削除する", "/posts/#{@post.id}/destroy", method: :delete ) %></p>
+    <p><%= link_to("編集する", "/study-records/#{@post.id}/edit") %></p>
+    <p><%= link_to("削除する", "/study-records/#{@post.id}/destroy", method: :delete ) %></p>
 </div>
 

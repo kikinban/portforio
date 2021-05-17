@@ -1,28 +1,28 @@
 
 # todo モデル名・コントローラ名・テーブル名を変更（study records）
-class PostsController < ApplicationController
+class StudyRecordsController < ApplicationController
   # 学習記録一覧
   def index
-    @posts = Post.all
+    @posts = StudyRecord.all
   end
 
   # 記録詳細
   def show
-    @post = Post.find_by(id: params[:id])
+    @post = StudyRecord.find_by(id: params[:id])
   end
 
   # 新規記録
   def new
-    @post = Post.new
+    @post = StudyRecord.new
   end
 
   # 記録を保存する
   def create
-    @post = Post.new(post_params)
+    @post = StudyRecord.new(post_params)
     if @post.save
       redirect_to posts_index_path(@post)
     else
-      @post = Post.new(post_params)
+      @post = StudyRecord.new(post_params)
       render "posts/new"
     end
   end
@@ -32,17 +32,17 @@ class PostsController < ApplicationController
     year = params[:year].to_s
     month = params[:month].to_s
     year_month = year + "/" + month
-    @posts = Post.where(date: Time.parse(year_month).beginning_of_week..Time.parse(year_month).end_of_month)
+    @posts = StudyRecord.where(date: Time.parse(year_month).beginning_of_week..Time.parse(year_month).end_of_month)
   end
 
   # 編集
   def edit 
-    @post = Post.find_by(id: params[:id])
+    @post = StudyRecord.find_by(id: params[:id])
   end
 
   # 更新
   def update
-    @post = Post.find_by(id: params[:id])
+    @post = StudyRecord.find_by(id: params[:id])
     if @post.update(post_params)
       flash[:notice] = "変更した記録が保存されました"
       redirect_to posts_index_path(post_params)
@@ -53,7 +53,7 @@ class PostsController < ApplicationController
 
   # 削除
   def destroy
-    @post = Post.find_by(id: params[:id])
+    @post = StudyRecord.find_by(id: params[:id])
     @post.id == params[:id]
     @post.destroy
     flash[:notice] = "記録を削除しました"

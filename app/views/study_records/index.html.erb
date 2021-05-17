@@ -1,10 +1,10 @@
 
 <div class="main-posts-index">
   <div class="container">
-    <h1>学習記録一覧</h1>
+    <h1 class="all-title">Study Records</h1>
     <div class="posts-index-date">
         <% @posts.each do |post| %> 
-          <p class="interval-1"><%= link_to(post.date, "/posts/#{post.id}") %> </p>
+          <p class="interval-1"><%= link_to(post.date, "/study_records/#{post.id}") %> </p>
         <% end %>
 
     </div>
