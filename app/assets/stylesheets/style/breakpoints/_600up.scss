@@ -21,8 +21,10 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 
   /*----- ヘッダー -----*/
   header {
+    margin: 0% 10%;
     /* ロゴアイコン */
     #logo-960 {
+      padding-left: 0px;
       img {
         height: 35px;
       }
@@ -37,19 +39,28 @@ Stylesheet: 600px以上のタブレットやモニタで適用
     aside {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 10%;
       background-color: none;
       height: auto;
+      width: auto;
       /* ナビゲーション位置調節 */
-      nav ul {
-        display: flex;
-        justify-content: flex-end;
-        /* 下線を非表示 */
-        #header-list {
-          border-bottom: none;
+      nav {
+        margin: 10px 0px 0px 10px;
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          /* 下線を非表示 */
+          #header-list {
+            border-bottom: none;
+            font-size: 1.6em;
 
-          &:last-child {
-            display: none;
+            &:last-child {
+              display: none;
+            }
+
+            &:nth-child(4) {
+              padding-right: 0px;
+            }
           }
         }
       }
@@ -75,24 +86,56 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 
   /*----- レポートコンテンツ -----*/
   .top-contents {
-    margin: 10px 40px;
+    margin: 0% 10%;
     width: auto;
+    /* サイトについて */
+    .site-contents {
+      margin: 5% 0%;
+      .site-title {
+        font-size: 2.5em;
+      }
+      .site-p {
+        font-size: 1.4em;
+      }
+      .site-content {
+        font-size: 1.6em;
+        width: 100%;
+      }
+    }
     .each-contents-1 .reports {
+      .site-p {
+        font-size: 1.4em;
+      }
+      .record-contents {
+        width: 80%;
+        .content-p {
+          font-size: 1.6em;
+          margin: 15px 0px;
+        }
+
+        .small-icon-list {
+          margin-top: 25px;
+        }
+        /* 花枠view */
+        .frame-img {
+          img {
+            width: 55.3px;
+            height: 55px;
+          }
+        }
+        .view {
+          position: absolute;
+          bottom: 21px;
+          right: 11px;
+        }
+
+        a {
+          font-size: 1.4em;
+        }
+      }
       h2 {
         font-size: 2.5em;
         margin-bottom: 10px;
-      }
-      /* レポートタイトル左右に配置する線の調節 */
-      #reports-line-1 {
-        top: 4%;
-        width: 36%;
-      }
-      #reports-line-2 {
-        top: 4%;
-        width: 36%;
-      }
-      p {
-        font-size: 1.4em;
       }
 
       /* 西暦タイトル */
@@ -120,16 +163,6 @@ Stylesheet: 600px以上のタブレットやモニタで適用
         p {
           font-size: 1.4em;
         }
-
-        /* レポートタイトル左右に配置する線の調節 */
-        #works-line-1 {
-          width: 40%;
-          top: 12%;
-        }
-        #works-line-2 {
-          width: 40%;
-          top: 12%;
-        }
       }
     }
   }
@@ -154,30 +187,39 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 
   /*----- プロフィール詳細 -----*/
   .profiles {
-    margin: 10px 40px;
+    margin: 0% 10%;
 
     /* （タイトル）私について */
     .about {
-      font-size: 20px;
+      font-size: 1.6em;
       width: 100px;
+      height: 18px;
     }
 
+    /* リストを横並びにする */
+    #pro-center {
+      .profile-lists {
+        font-size: 1.6em;
+      }
+    }
     /*----- 経歴 -----*/
     .careers {
       /* タイトル */
       .career-title {
-        font-size: 20px;
+        font-size: 1.6em;
         width: 40px;
+        height: 18px;
       }
       /* 保育士歴 */
       .year {
-        font-size: 14px;
+        font-size: 1.4em;
+      }
+
+      #career {
+        font-size: 1.6em;
       }
     }
 
-    p {
-      font-size: 16px;
-    }
     /* 3つのリスト調節 */
     .left-pro-li {
       margin: 0px 10px;
@@ -189,7 +231,6 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 
     /* 業務内容 */
     .careers #career ul li {
-      font-size: 16px;
       margin: 10px 10px;
     }
   }
@@ -197,63 +238,102 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   /*-------------------------------------------------------------
   レポートページ
   --------------------------------------------------------------*/
-
-  /*----- 新規登録・全記録一覧リンク -----*/
-  .report-link {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-
-    a {
-      font-size: 1.6em;
-      color: $cblue;
+  /* ----- 新規投稿アイコン ----- */
+  .new-input {
+    width: 80%;
+    margin: 10px auto;
+    text-align: right;
+    font-size: 1.6em;
+    vertical-align: middle;
+    .new-image {
+      position: static;
+    }
+    .new-none {
       text-decoration: none;
+      color: $pink;
+      display: inline;
 
-      &:hover {
-        text-decoration: underline;
-        color: $cblue;
-      }
+      a {
+        color: $pink;
+        &:hover {
+          text-decoration: underline;
+        }
 
-      &:active {
-        text-decoration: none;
-      }
+        &:active {
+          text-decoration: none;
+        }
 
-      &:visited {
-        color: $cblue;
+        &:visited {
+          color: $cblue;
+        }
       }
     }
+  }
 
-    p {
-      margin: 0px 10px;
-      display: inline-block;
+  /*----- 表 -----*/
+  .report-tables table {
+    width: 80%;
+    caption {
+      font-size: 1.6em;
+      height: 20px;
+    }
+
+    th {
+      font-size: 1.6em;
+    }
+
+    td {
+      font-size: 1.6em;
     }
   }
 
   /*----- レポートコンテンツ -----*/
-  .each-contents-1 .reports {
-    /* 2020年・2021年 文字サイズ */
-    .year-number-1 {
-      font-size: 100%;
-      margin: 10px;
+  .each-contents-1 {
+    margin: 10px 10% 10px 10%;
+    .study-title {
+      font-size: 1.6em;
+      height: 20px;
     }
+    .study-links {
+      p {
+        a {
+          font-size: 1.6em;
+        }
+      }
 
-    .year-number-2 {
-      font-size: 100%;
-      margin: 10px;
-    }
-
-    /* リスト文字 */
-    ul #october {
-      a {
-        font-size: 100%;
+      img {
+        width: 16px;
+        height: 16px;
       }
     }
+    .reports {
+      .month-title {
+        font-size: 1.6em;
+      }
+      /* 2020年・2021年 文字サイズ */
+      .year-number-1 {
+        font-size: 100%;
+        margin: 10px;
+        font-size: 1.2em;
+      }
 
-    ul li img {
-      width: 83.3px;
-      height: 83px;
+      .year-number-2 {
+        font-size: 100%;
+        margin: 10px;
+        font-size: 1.2em;
+      }
+
+      /* リスト文字 */
+      ul #october {
+        a {
+          font-size: 100%;
+        }
+      }
+
+      ul li img {
+        width: 83.3px;
+        height: 83px;
+      }
     }
   }
 

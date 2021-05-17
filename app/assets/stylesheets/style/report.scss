@@ -10,21 +10,82 @@
 @import "other/base_color";
 
 /*------------------------------------------------------------
+新規記録アイコン
+------------------------------------------------------------*/
+.new-input {
+  .new-image {
+    position: absolute;
+    top: 8px;
+    right: 40px;
+
+    img {
+      color: $cblue;
+    }
+  }
+  .new-none {
+    display: none;
+  }
+}
+
+/*------------------------------------------------------------
 タイトル
 ------------------------------------------------------------*/
 /* ---- 文字調節 ---- */
-.all-title {
-  text-align: center;
-  margin-bottom: 5px;
+.report-title {
+  .all-title {
+    text-align: center;
 
-  h1 {
-    font-size: 30px;
-    color: $cblue;
-    margin: 30px 0px;
+    h1 {
+      font-size: 30px;
+      color: $cblue;
+      margin: 20px 0px;
+    }
+
+    p {
+      font-size: 15px;
+    }
   }
+}
 
-  p {
-    font-size: 15px;
+/*------------------------------------------------------------
+表
+------------------------------------------------------------*/
+.report-tables {
+  text-align: center;
+  table {
+    border: solid 1px brown;
+    margin: 0 auto;
+    width: 90%;
+
+    caption {
+      margin: 10px 10px 10px 0px;
+      font-size: 1.4em;
+      font-weight: bolder;
+      text-align: left;
+      padding-left: 5px;
+      border-left: solid 5px yellowgreen;
+      height: 16px;
+    }
+
+    th {
+      border: solid 1px brown;
+      padding: 5px;
+      font-size: 1.4em;
+      font-weight: 500;
+    }
+
+    td {
+      border: solid 1px brown;
+      text-align: center;
+      padding: 5px;
+      font-size: 1.4em;
+      font-weight: 300;
+      vertical-align: middle;
+
+      .book-title {
+        font-size: 0.5em;
+      }
+    }
   }
 }
 
@@ -32,50 +93,68 @@
 月ごとに記録を表示
 ------------------------------------------------------------*/
 
-/*----- 新規登録・全記録一覧リンク -----*/
-.report-link {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 7px;
-  right: 30px;
-
-  a {
-    font-size: 1.4em;
-    color: $cblue;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-      color: $cblue;
-    }
-
-    &:active {
-      text-decoration: none;
-    }
-
-    &:visited {
-      color: $cblue;
-    }
-  }
-
-  p {
-    margin: 0px 10px;
-    display: inline-block;
-  }
-}
-
 /*----- レポートコンテンツ -----*/
 .each-contents-1 {
-  text-align: center;
   position: relative;
   height: 63%;
-  margin-bottom: 10px;
+  margin: 10px 5% 10px 5%;
+
+  .study-title {
+    font-size: 1.4em;
+    margin: 10px 0px;
+    font-weight: bolder;
+    padding-left: 5px;
+    border-left: solid 5px yellowgreen;
+    height: 16px;
+    text-align: left;
+  }
+
+  .study-links {
+    display: flex;
+    justify-content: left;
+
+    p {
+      .study-icon {
+        margin-left: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $cblue;
+        font-size: 1.2em;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        text-decoration: none;
+      }
+
+      &:visited {
+        color: $cblue;
+      }
+    }
+
+    img {
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+    }
+  }
 
   .reports {
     display: inline-block;
     position: relative;
     width: 100%;
+    text-align: center;
+    /* サブタイトル（月ごとにまとめました） */
+    .month-title {
+      font-size: 1.4em;
+      margin-top: 10px;
+      border-bottom: solid 1px brown;
+      padding-bottom: 5px;
+    }
 
     /* 2020年・2021年 文字サイズ */
     .year-number-1 {

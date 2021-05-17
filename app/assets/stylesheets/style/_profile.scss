@@ -5,48 +5,43 @@
 /* 基本プロフィール */
 .profiles {
   position: relative;
-  margin: 10px 0px;
+  margin: 0% 5%;
 
   /* 文字設定 */
-  & .about {
+  .about {
     width: 75px;
-    font-size: 15px;
+    font-size: 1.4em;
+    height: 16px;
     color: $cblue;
-    border-bottom: 1px solid $cblue;
-    padding: 3px;
-    margin-left: 10px;
+    border-left: 5px solid yellowgreen;
+    padding-left: 5px;
     font-weight: bolder;
   }
 
-  & li {
-    font-size: 15px;
+  li {
     color: $cblue;
     margin: 10px;
   }
 
-  & p {
-    font-size: 15px;
-    color: $cblue;
-  }
-
   /* リストを横並びにする */
-  & #pro-center {
+  #pro-center {
     margin-bottom: 5px;
     /* リスト3つを中央揃え */
-    & .profile-lists {
+    .profile-lists {
       padding: 0px 10px;
       display: flex;
       flex-direction: row;
+      font-size: 1.4em;
 
-      & .left-pro-li {
+      .left-pro-li {
         list-style: none;
       }
 
-      & .pro-symbol {
+      .pro-symbol {
         list-style: none;
       }
 
-      & .right-pro-li {
+      .right-pro-li {
         list-style: none;
         position: relative;
 
@@ -65,42 +60,51 @@
   /* 経歴 */
   .careers {
     /* 経歴タイトル */
-    & .career-title {
+    .career-title {
       width: 30px;
-      font-size: 15px;
+      font-size: 1.4em;
       font-weight: bolder;
       color: $cblue;
-      border-bottom: 1px solid $cblue;
-      padding: 3px;
-      margin: 0px 0px 10px 10px;
+      border-left: 5px solid yellowgreen;
+      padding-left: 5px;
+      height: 16px;
     }
 
     /* 保育士歴 */
-    & .year {
-      margin: -5px 0px 0px 20px;
-      font-size: 12px;
+    .year {
+      margin: 5px 0px 0px 10px;
+      font-size: 1.2em;
     }
 
     /* 業務内容 */
-    & #career {
+    #career {
       margin: 0px 10px 10px 10px;
+      font-size: 1.4em;
 
-      & .business-content {
+      .business-content {
         margin-top: 10px;
+        border-bottom: solid 1px $pink;
+        padding-bottom: 5px;
       }
 
-      & ul li {
+      ul li {
         list-style: none;
-        margin: 5px 10px;
+        margin: 10px 10px;
+        line-height: 1.3;
+
+        &:first-child {
+          margin: 5px 10px;
+        }
 
         img {
           width: auto;
-          height: 15px;
+          height: 11px;
+          transform: rotate(6deg);
+          margin-right: 5px;
         }
 
         .while {
-          width: 15px;
-          height: 15px;
+          width: 10px;
           display: inline-block;
         }
       }

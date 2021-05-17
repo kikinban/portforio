@@ -2,9 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+/*------------------------------------------------------------------------
+
+Postsテーブルに関するcssファイル
+このファイル内はスマホ画面を基準として記述している
+480以上の画面サイズはブレイクポイントごとにcssファイルが存在する
+
+--------------------------------------------------------------------------*/
 @import "other/base_color";
 
-// ---- 新規投稿画面のデザイン ---- //
+/*---------------------------------------------------------------
+新規記録：入力画面のデザイン
+---------------------------------------------------------------*/
+
 .posts-forms {
   width: 100%;
   // 入力フォームデザイン
@@ -18,7 +28,18 @@
       flex-direction: column;
       justify-content: center;
       font-size: 1.4em;
-
+      /* 日付・勉強時間 */
+      .small-form {
+        .date-margin {
+          margin: 0px 20px 10px 0px;
+          width: 40%;
+          height: 14px;
+        }
+        .form-width {
+          width: 5%;
+          height: 14px;
+        }
+      }
       // タイトル文字
       .form-name {
         font-size: 30px;
@@ -34,13 +55,11 @@
       textarea {
         resize: vertical;
         width: auto;
-        height: 40px;
+        height: 100px;
       }
 
-      // 日付ボタンの大きさ 3つ
-      select {
-        width: 60px;
-        margin: 10px;
+      .form-content {
+        height: 500px;
       }
 
       // 文字を中央寄せ
@@ -52,14 +71,18 @@
 
       // 送信ボタンの大きさ指定
       .submit {
-        margin: 10px auto;
-        width: 110px;
+        margin: 15px auto;
+        width: 100%;
+        font-weight: 600;
+        font-size: 1em;
       }
     }
   }
 }
 
-// ---- データ記録ページ ---- //
+/*---------------------------------------------------------------
+データ記録ページ
+---------------------------------------------------------------*/
 .study-record {
   h1 {
     font-size: 30px;

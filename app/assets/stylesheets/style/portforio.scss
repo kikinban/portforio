@@ -76,7 +76,7 @@ main {
 
   /* (共通)レポート・ワークタイトル文字 */
   h2 {
-    font-size: 1.9em;
+    font-size: 1.8em;
     font-weight: 100;
     margin: 0px 0px 5px 0px;
     color: $cblue;
@@ -85,7 +85,6 @@ main {
   p {
     color: $cblue;
     font-weight: 100;
-    font-size: 1em;
     margin-bottom: 10px;
   }
 
@@ -107,7 +106,34 @@ main {
       color: $cblue;
     }
   }
+  /* ---- サイトについて ---- */
+  .site-contents {
+    text-align: center;
 
+    .site-title {
+      font-size: 1.8em;
+    }
+
+    .site-p {
+      margin-top: 5px;
+    }
+
+    .site-content {
+      text-align: left;
+      font-size: 1.4em;
+      width: 90%;
+      margin: 20px auto;
+      line-height: 1.5;
+
+      h3 {
+        font-size: 1.2em;
+        margin: 10px 0px;
+        font-weight: 300;
+        border-bottom: solid 1px $pink;
+        padding: 3px;
+      }
+    }
+  }
   /* ---- レポート関連 ---- */
   .each-contents-1 {
     text-align: center;
@@ -119,6 +145,76 @@ main {
       display: inline-block;
       position: relative;
       width: 100%;
+
+      /* ---- 学習記録リンク ---- */
+      .record-contents {
+        text-align: left;
+        position: relative;
+        margin: 25px auto;
+        width: 70%;
+
+        .content-p {
+          font-size: 1.2em;
+        }
+
+        /* 新規投稿・全記録一覧リンク */
+        .small-icon-list {
+          display: flex;
+          margin-top: 15px;
+          .record-icon {
+            img {
+              width: 14px;
+              height: 14px;
+              margin-right: 5px;
+            }
+          }
+
+          .new-record-icon {
+            margin-right: 10px;
+          }
+        }
+        /* 花枠view */
+        .frame-img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform: rotate(10deg);
+
+          img {
+            width: 40.3px;
+            height: 40px;
+          }
+        }
+        .view {
+          position: absolute;
+          bottom: 17px;
+          right: 9px;
+          transform: rotate(10deg);
+          font-weight: 400;
+        }
+        /* リンクデザイン */
+        a {
+          text-decoration: none;
+          color: $cblue;
+          font-size: 1em;
+          vertical-align: middle;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:active {
+          text-decoration: none;
+        }
+
+        &:visited {
+          color: $cblue;
+        }
+      }
+      /* 学習記録タイトル */
+      .record-title {
+        margin-bottom: 10px;
+      }
       /* 2020年・2021年 文字サイズ */
       .year-number-1 {
         font-size: 1.2em;
@@ -126,27 +222,6 @@ main {
 
       .year-number-2 {
         font-size: 1.2em;
-      }
-
-      /* レポート文字 横ライン */
-      #reports-line-1 {
-        width: 33%;
-        height: 2px;
-        display: inline-block;
-        border-top: solid 2px yellowgreen;
-        position: absolute;
-        top: 4%;
-        left: 10px;
-      }
-
-      #reports-line-2 {
-        width: 33%;
-        height: 2px;
-        display: inline-block;
-        border-top: solid 2px yellowgreen;
-        position: absolute;
-        top: 4%;
-        right: 10px;
       }
 
       /* 月ごとリスト */
@@ -204,27 +279,6 @@ main {
     text-align: center;
     position: relative;
     height: 40%;
-
-    /* ワークタイトル文字 横ライン */
-    #works-line-1 {
-      width: 32%;
-      height: 2px;
-      display: inline-block;
-      border-top: solid 2px yellowgreen;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-
-    #works-line-2 {
-      width: 32%;
-      height: 2px;
-      display: inline-block;
-      border-top: solid 2px yellowgreen;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
 
     /* 四角リスト */
     ul {
