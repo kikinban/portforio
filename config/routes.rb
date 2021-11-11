@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "study_records/new" => "study_records#new"
   post "study_records/create" => "study_records#create"
   get "study_records/months" => "study_records#months"
-  get "study_records/:id" => "study_records#show"
+  get "study_records/:id" , to: 'study_records#show' , as: 'show'
   get "study_records/:id/edit" => "study_records#edit"
   patch "study_records/:id/update" => "study_records#update"
   delete "study_records/:id/destroy" => "study_records#destroy"

@@ -4,5 +4,11 @@ class StudyRecord < ApplicationRecord
     {presence: true}
 
     default_scope -> { order(date: :asc)}
-   
+    
+    def previous
+        StudyRecord.where("date < ?",date).order("date DESC").first
+    end
+    def next
+        StudyRecord.where("date > ?",date).order("date ASC").first
+    end
 end

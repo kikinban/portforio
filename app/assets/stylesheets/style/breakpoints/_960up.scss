@@ -195,13 +195,9 @@ Stylesheet: 960px以上のモニタで適用
     .container {
       .posts-index-date {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        .interval-1 {
-          margin: 0;
-          padding: 10px;
-        }
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
       }
     }
   }

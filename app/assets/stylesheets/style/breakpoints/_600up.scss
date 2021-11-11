@@ -349,24 +349,47 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   学習記録記事データ
   -----------------------------------------------------------------*/
 
-  .study-records {
+  .study-record {
     h1 {
       font-size: 40px;
       margin: 40px;
     }
 
     p {
-      font-size: 100%;
+      font-size: 1.6em;
+    }
+
+    .record-box-1 {
+      font-size: 1.6em;
+    }
+
+    .record-box-2 {
+      font-size: 1.6em;
+    }
+
+    .record-box-3 {
+      font-size: 1.6em;
     }
   }
 
   /*-----------------------------------------------------------------
   学習記録記事一覧
   -----------------------------------------------------------------*/
+  .main-posts-index {
+    .container {
+      margin: 0px 10%;
+      .posts-index-date {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 1.6em;
 
-  .posts-index-date {
-    margin: 10px 40px;
-    width: auto;
+        .interval-1 {
+          margin: 10px 0px 0px 0px;
+        }
+      }
+    }
   }
 
   /*-----------------------------------------------------------------

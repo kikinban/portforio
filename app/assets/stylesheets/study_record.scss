@@ -85,13 +85,13 @@ Postsテーブルに関するcssファイル
 ---------------------------------------------------------------*/
 .study-record {
   h1 {
-    font-size: 30px;
+    font-size: 3em;
     margin: 25px;
     text-align: center;
   }
 
   p {
-    font-size: 15px;
+    font-size: 1.4em;
     font-weight: bold;
     padding: 5px;
     margin: 5px 20px;
@@ -104,24 +104,36 @@ Postsテーブルに関するcssファイル
   }
 
   .record-box-1 {
-    height: 50px;
+    font-size: 1.4em;
+    height: auto;
     margin: 0 20px;
     margin-bottom: 10px;
     white-space: pre-wrap;
   }
 
   .record-box-2 {
-    height: 300px;
+    font-size: 1.4em;
+    height: auto;
     margin: 0 20px;
     margin-bottom: 10px;
     white-space: pre-wrap;
   }
 
   .record-box-3 {
-    height: 200px;
+    font-size: 1.4em;
+    height: auto;
     margin: 0 20px;
     margin-bottom: 10px;
     white-space: pre-wrap;
+  }
+
+  /* 編集・削除ボタンの位置 */
+  .link-button {
+    display: flex;
+
+    p {
+      border-bottom: 0;
+    }
   }
 }
 
@@ -134,14 +146,22 @@ Postsテーブルに関するcssファイル
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0px 5%;
+    text-align: center;
+
+    h1 {
+      font-size: 3em;
+      margin: 25px;
+    }
 
     .posts-index-date {
       text-align: center;
+      font-size: 1.4em;
 
       .interval-1 {
         border-bottom: solid 2px $pink;
         padding-bottom: 10px;
-        margin: 10px;
+        margin: 10px 0px;
       }
     }
   }

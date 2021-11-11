@@ -1,5 +1,5 @@
 <div class="study-record">
-    <h1>学習記録</h1>
+    <h1>Study Record</h1>
     <p>日付:<span><%= @post.date %></span></p>
     <p>学習時間:<span><%= @post.time %>時間<%= @post.minute %>分</span></p>
     <div>
@@ -30,7 +30,15 @@
         <p>次回の学習計画</p>
         <div class="record-box-1"><%= @post.tomorrow %></div>
     </div>
-    <p><%= link_to("編集する", "/study-records/#{@post.id}/edit") %></p>
-    <p><%= link_to("削除する", "/study-records/#{@post.id}/destroy", method: :delete ) %></p>
+    <div class="link-button">
+        <p><%= link_to("編集する", "/study_records/#{@post.id}/edit") %></p>
+        <p><%= link_to("削除する", "/study_records/#{@post.id}/destroy", method: :delete ) %></p>
+    </div>
+    <% if @post.previous.present? %>
+    <%= link_to "前ページ", show_path(@post.previous) %>
+    <% end %>
+    <% if @post.next.present? %>
+    <%= link_to "次ページ", show_path(@post.next) %>
+    <% end %>
 </div>
 

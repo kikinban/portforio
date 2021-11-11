@@ -1,5 +1,4 @@
 
-# todo モデル名・コントローラ名・テーブル名を変更（study records）
 class StudyRecordsController < ApplicationController
   # 学習記録一覧
   def index
@@ -20,7 +19,7 @@ class StudyRecordsController < ApplicationController
   def create
     @post = StudyRecord.new(post_params)
     if @post.save
-      redirect_to posts_index_path(@post)
+      redirect_to study_records_index_path(@post)
     else
       @post = StudyRecord.new(post_params)
       render "posts/new"
@@ -32,7 +31,7 @@ class StudyRecordsController < ApplicationController
     year = params[:year].to_s
     month = params[:month].to_s
     year_month = year + "/" + month
-    @posts = StudyRecord.where(date: Time.parse(year_month).beginning_of_week..Time.parse(year_month).end_of_month)
+    @posts = StudyRecord.where(date: Time.parse(year_month).beginning_of_month..Time.parse(year_month).end_of_month)
   end
 
   # 編集
@@ -45,7 +44,7 @@ class StudyRecordsController < ApplicationController
     @post = StudyRecord.find_by(id: params[:id])
     if @post.update(post_params)
       flash[:notice] = "変更した記録が保存されました"
-      redirect_to posts_index_path(post_params)
+      redirect_to study_records_index_path(post_params)
     else
       render "posts/edit"
     end
@@ -59,10 +58,11 @@ class StudyRecordsController < ApplicationController
     flash[:notice] = "記録を削除しました"
     redirect_to "/posts/index"
   end
-
+  
   # ストロングパラメータ
   private
   def post_params
-    params.require(:post).permit(:date, :time, :minute, :learning_plan, :learning_content, :understandable, :it_took_time, :something_felt, :notices, :tomorrow)
+    params.require(:study_record).permit(:date, :time, :minute, :learning_plan, :learning_content, :understandable, :it_took_time, :something_felt, :notices, :tomorrow)
   end
+
 end
