@@ -56,7 +56,7 @@ class StudyRecordsController < ApplicationController
     @post.id == params[:id]
     @post.destroy
     flash[:notice] = "記録を削除しました"
-    redirect_to "/posts/index"
+    redirect_to "posts/index"
   end
   
   # ストロングパラメータ
