@@ -7,216 +7,218 @@ Stylesheet: 960px以上のモニタで適用
 @import "other/base_color";
 
 @media screen and (min-width: 960px) {
-  /*-----------------------------------------------------------
+	/*-----------------------------------------------------------
   トップページ
   ------------------------------------------------------------*/
 
-  /*----- ヘッダー -----*/
-  header {
-    /* ナビゲーションリスト */
-    aside nav #header-list {
-      font-size: 18px;
-    }
-  }
-  /*----- タイトル文字の枠調整 -----*/
-  body #box-fixed .box-title .titles {
-    width: 46%;
-    height: 19%;
+	/*----- ヘッダー -----*/
+	header {
+		/* ナビゲーションリスト */
+		aside nav #header-list {
+			font-size: 18px;
+		}
+	}
+	/*----- タイトル文字の枠調整 -----*/
+	body #box-fixed .box-title .titles {
+		width: 46%;
+		height: 19%;
 
-    h1 {
-      font-size: 5.5em;
-    }
-  }
-  /*----- レポートコンテンツ -----*/
-  .top-contents {
-    margin: 10px 80px;
-    width: auto;
-    /* サイトについて */
-    .site-contents {
-      margin: 5% 0%;
-      .site-title {
-        font-size: 3em;
-      }
-      .site-p {
-        font-size: 1.4em;
-      }
-      .site-content {
-        font-size: 1.6em;
-        width: 100%;
-      }
-    }
-    .each-contents-1 .reports {
-      .record-contents {
-        width: 65%;
-        .content-p {
-          font-size: 1.9em;
-          margin: 20px 0px;
-        }
+		h1 {
+			font-size: 5.5em;
+		}
+	}
+	/*----- レポートコンテンツ -----*/
+	.top-contents {
+		margin: 10px 80px;
+		width: auto;
+		/* 私について */
 
-        .small-icon-list {
-          margin-top: 25px;
-        }
-        /* 花枠view */
-        .frame-img {
-          img {
-            width: 60.3px;
-            height: 60px;
-          }
-        }
-        .view {
-          position: absolute;
-          bottom: 24px;
-          right: 13px;
-        }
-        a {
-          font-size: 1.4em;
-        }
-      }
-      h2 {
-        font-size: 3em;
-        margin-bottom: 10px;
-      }
-      /* レポートタイトル左右に配置する線の調節 */
-      #reports-line-1 {
-        top: 6%;
-      }
-      #reports-line-2 {
-        top: 6%;
-      }
+		/* サイトについて */
+		.site-contents {
+			margin: 5% 0%;
+			.site-title {
+				font-size: 3em;
+			}
+			.site-p {
+				font-size: 1.4em;
+			}
+			.site-content {
+				font-size: 1.6em;
+				width: 100%;
+			}
+		}
+		.each-contents-1 .reports {
+			.record-contents {
+				width: 65%;
+				.content-p {
+					font-size: 1.9em;
+					margin: 20px 0px;
+				}
 
-      /* 西暦タイトル */
-      .year-number-1 {
-        font-size: 1.6em;
-      }
+				.small-icon-list {
+					margin-top: 25px;
+				}
+				/* 花枠view */
+				.frame-img {
+					img {
+						width: 70.3px;
+						height: 70px;
+					}
+				}
+				.view {
+					position: absolute;
+					bottom: 29px;
+					right: 18px;
+				}
+				a {
+					font-size: 1.2em;
+				}
+			}
+			h2 {
+				font-size: 3em;
+				margin-bottom: 10px;
+			}
+			/* レポートタイトル左右に配置する線の調節 */
+			#reports-line-1 {
+				top: 6%;
+			}
+			#reports-line-2 {
+				top: 6%;
+			}
 
-      .year-number-2 {
-        font-size: 1.6em;
-      }
+			/* 西暦タイトル */
+			.year-number-1 {
+				font-size: 1.6em;
+			}
 
-      /* 花枠画像 */
-      ul li img {
-        width: 103.3px;
-        height: 103px;
-      }
+			.year-number-2 {
+				font-size: 1.6em;
+			}
 
-      ul li {
-        margin: 0px 20px 5px 20px;
-      }
-    }
-  }
-  /*----- ワークコンテンツ -----*/
-  .each-contents-2 .work {
-    h2 {
-      font-size: 3em;
-    }
-    p {
-      font-size: 2.4em;
-    }
-    /* レポートタイトル左右に配置する線の調節 */
-    #works-line-1 {
-      width: 40%;
-      top: 12%;
-    }
-    #works-line-2 {
-      width: 40%;
-      top: 12%;
-    }
-    /* リスト */
-    ul li {
-      width: 103px;
-      height: 103px;
-      margin: 0px 20px 5px 20px;
-    }
-  }
+			/* 花枠画像 */
+			ul li img {
+				width: 103.3px;
+				height: 103px;
+			}
 
-  /* ---------------------------------------------------------
+			ul li {
+				margin: 0px 20px 5px 20px;
+			}
+		}
+	}
+	/*----- ワークコンテンツ -----*/
+	.each-contents-2 .work {
+		h2 {
+			font-size: 3em;
+		}
+		p {
+			font-size: 2.4em;
+		}
+		/* レポートタイトル左右に配置する線の調節 */
+		#works-line-1 {
+			width: 40%;
+			top: 12%;
+		}
+		#works-line-2 {
+			width: 40%;
+			top: 12%;
+		}
+		/* リスト */
+		ul li {
+			width: 103px;
+			height: 103px;
+			margin: 0px 20px 5px 20px;
+		}
+	}
+
+	/* ---------------------------------------------------------
   トップページ以外のh1指定
   -----------------------------------------------------------*/
-  body .all-title {
-    font-size: 5em;
-    margin: 60px 0px;
-  }
+	body .all-title {
+		font-size: 5em;
+		margin: 60px 0px;
+	}
 
-  /*-------------------------------------------------------------
+	/*-------------------------------------------------------------
   プロフィールページ
   --------------------------------------------------------------*/
 
-  /*----- プロフィール詳細 -----*/
-  .profiles {
-    margin: 20px 10%;
-  }
+	/*----- プロフィール詳細 -----*/
+	.profiles {
+		margin: 20px 10%;
+	}
 
-  /*-------------------------------------------------------------
+	/*-------------------------------------------------------------
   レポートページ
   --------------------------------------------------------------*/
-  /*----- 表 -----*/
-  .report-tables table {
-    caption {
-      height: 20px;
-    }
+	/*----- 表 -----*/
+	.report-tables table {
+		caption {
+			height: 20px;
+		}
 
-    td {
-      .table-br {
-        display: none;
-      }
+		td {
+			.table-br {
+				display: none;
+			}
 
-      .book-title {
-        font-size: 0.7em;
-        margin-left: 10px;
-      }
-    }
-  }
-  /*----- レポートコンテンツ -----*/
-  .each-contents-1 {
-    .study-title {
-      height: 20px;
-    }
+			.book-title {
+				font-size: 0.7em;
+				margin-left: 10px;
+			}
+		}
+	}
+	/*----- レポートコンテンツ -----*/
+	.each-contents-1 {
+		.study-title {
+			height: 20px;
+		}
 
-    .reports {
-      .year-number-1 {
-        font-size: 1.4em;
-      }
+		.reports {
+			.year-number-1 {
+				font-size: 1.4em;
+			}
 
-      .year-number-2 {
-        font-size: 1.4em;
-      }
-      ul li img {
-        width: 103.3px;
-        height: 103px;
-      }
-    }
-  }
+			.year-number-2 {
+				font-size: 1.4em;
+			}
+			ul li img {
+				width: 103.3px;
+				height: 103px;
+			}
+		}
+	}
 
-  /*---------------------------------------------------------------
+	/*---------------------------------------------------------------
   学習記事一覧ページ
   ---------------------------------------------------------------*/
 
-  .main-posts-index {
-    .container {
-      .posts-index-date {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0;
-      }
-    }
-  }
+	.main-posts-index {
+		.container {
+			.posts-index-date {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin: 0;
+			}
+		}
+	}
 
-  /*-----------------------------------------------------------------
+	/*-----------------------------------------------------------------
   学習記録記事一覧
   -----------------------------------------------------------------*/
 
-  .posts-index-date {
-    margin: 20px 10%;
-    width: auto;
-  }
+	.posts-index-date {
+		margin: 20px 10%;
+		width: auto;
+	}
 
-  /*-----------------------------------------------------------------
+	/*-----------------------------------------------------------------
   フッター
   -----------------------------------------------------------------*/
 
-  /*----- フッターリスト -----*/
-  footer #foo-title-960 li {
-    font-size: 18px;
-  }
+	/*----- フッターリスト -----*/
+	footer #foo-title-960 li {
+		font-size: 18px;
+	}
 }

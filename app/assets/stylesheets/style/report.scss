@@ -13,18 +13,18 @@
 新規記録アイコン
 ------------------------------------------------------------*/
 .new-input {
-  .new-image {
-    position: absolute;
-    top: 8px;
-    right: 40px;
+	.new-image {
+		position: absolute;
+		top: 8px;
+		right: 40px;
 
-    img {
-      color: $cblue;
-    }
-  }
-  .new-none {
-    display: none;
-  }
+		img {
+			color: $blue;
+		}
+	}
+	.new-none {
+		display: none;
+	}
 }
 
 /*------------------------------------------------------------
@@ -32,61 +32,61 @@
 ------------------------------------------------------------*/
 /* ---- 文字調節 ---- */
 .report-title {
-  .all-title {
-    text-align: center;
+	.all-title {
+		text-align: center;
 
-    h1 {
-      font-size: 30px;
-      color: $cblue;
-      margin: 20px 0px;
-    }
+		h1 {
+			font-size: 30px;
+			color: $blue;
+			margin: 20px 0px;
+		}
 
-    p {
-      font-size: 15px;
-    }
-  }
+		p {
+			font-size: 15px;
+		}
+	}
 }
 
 /*------------------------------------------------------------
 表
 ------------------------------------------------------------*/
 .report-tables {
-  text-align: center;
-  table {
-    border: solid 1px brown;
-    margin: 0 auto;
-    width: 90%;
+	text-align: center;
+	table {
+		border: solid 1px brown;
+		margin: 0 auto;
+		width: 90%;
 
-    caption {
-      margin: 10px 10px 10px 0px;
-      font-size: 1.4em;
-      font-weight: bolder;
-      text-align: left;
-      padding-left: 5px;
-      border-left: solid 5px yellowgreen;
-      height: 16px;
-    }
+		caption {
+			margin: 10px 10px 10px 0px;
+			font-size: 1.4em;
+			font-weight: bolder;
+			text-align: left;
+			padding-left: 5px;
+			border-left: solid 5px yellowgreen;
+			height: 16px;
+		}
 
-    th {
-      border: solid 1px brown;
-      padding: 5px;
-      font-size: 1.4em;
-      font-weight: 500;
-    }
+		th {
+			border: solid 1px brown;
+			padding: 5px;
+			font-size: 1.4em;
+			font-weight: 500;
+		}
 
-    td {
-      border: solid 1px brown;
-      text-align: center;
-      padding: 5px;
-      font-size: 1.4em;
-      font-weight: 300;
-      vertical-align: middle;
+		td {
+			border: solid 1px brown;
+			text-align: center;
+			padding: 5px;
+			font-size: 1.4em;
+			font-weight: 300;
+			vertical-align: middle;
 
-      .book-title {
-        font-size: 0.5em;
-      }
-    }
-  }
+			.book-title {
+				font-size: 0.5em;
+			}
+		}
+	}
 }
 
 /*------------------------------------------------------------
@@ -95,124 +95,124 @@
 
 /*----- レポートコンテンツ -----*/
 .each-contents-1 {
-  position: relative;
-  height: 63%;
-  margin: 10px 5% 10px 5%;
+	position: relative;
+	height: 63%;
+	margin: 10px 5% 10px 5%;
 
-  .study-title {
-    font-size: 1.4em;
-    margin: 10px 0px;
-    font-weight: bolder;
-    padding-left: 5px;
-    border-left: solid 5px yellowgreen;
-    height: 16px;
-    text-align: left;
-  }
+	.study-title {
+		font-size: 1.4em;
+		margin: 10px 0px;
+		font-weight: bolder;
+		padding-left: 5px;
+		border-left: solid 5px yellowgreen;
+		height: 16px;
+		text-align: left;
+	}
 
-  .study-links {
-    display: flex;
-    justify-content: left;
+	.study-links {
+		display: flex;
+		justify-content: left;
 
-    p {
-      .study-icon {
-        margin-left: 10px;
-      }
+		p {
+			.study-icon {
+				margin-left: 10px;
+			}
 
-      a {
-        text-decoration: none;
-        color: $cblue;
-        font-size: 1.2em;
-      }
-      &:hover {
-        text-decoration: underline;
-      }
+			a {
+				text-decoration: none;
+				color: $blue;
+				font-size: 1.2em;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
 
-      &:active {
-        text-decoration: none;
-      }
+			&:active {
+				text-decoration: none;
+			}
 
-      &:visited {
-        color: $cblue;
-      }
-    }
+			&:visited {
+				color: $blue;
+			}
+		}
 
-    img {
-      width: 12px;
-      height: 12px;
-      margin: 0 5px;
-    }
-  }
+		img {
+			width: 12px;
+			height: 12px;
+			margin: 0 5px;
+		}
+	}
 
-  .reports {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    text-align: center;
-    /* サブタイトル（月ごとにまとめました） */
-    .month-title {
-      font-size: 1.4em;
-      margin-top: 10px;
-      border-bottom: solid 1px brown;
-      padding-bottom: 5px;
-    }
+	.reports {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		text-align: center;
+		/* サブタイトル（月ごとにまとめました） */
+		.month-title {
+			font-size: 1.4em;
+			margin-top: 10px;
+			border-bottom: solid 1px brown;
+			padding-bottom: 5px;
+		}
 
-    /* 2020年・2021年 文字サイズ */
-    .year-number-1 {
-      font-size: 12px;
-      margin: 10px;
-    }
+		/* 2020年・2021年 文字サイズ */
+		.year-number-1 {
+			font-size: 12px;
+			margin: 10px;
+		}
 
-    .year-number-2 {
-      font-size: 12px;
-      margin: 10px;
-    }
+		.year-number-2 {
+			font-size: 12px;
+			margin: 10px;
+		}
 
-    /* 月ごとリスト */
-    ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+		/* 月ごとリスト */
+		ul {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
 
-      /* クリック関連 */
-      #october {
-        a {
-          text-decoration: none;
-          color: $cblue;
-          font-size: 12px;
-        }
-        &:hover {
-          text-decoration: underline;
-        }
+			/* クリック関連 */
+			#october {
+				a {
+					text-decoration: none;
+					color: $blue;
+					font-size: 12px;
+				}
+				&:hover {
+					text-decoration: underline;
+				}
 
-        &:active {
-          text-decoration: none;
-        }
+				&:active {
+					text-decoration: none;
+				}
 
-        &:visited {
-          color: $cblue;
-        }
-      }
-      /* レポートリスト関連 */
-      li {
-        position: relative;
-        margin: 0px 20px 5px 20px;
-        /* 月名を花枠内に中央寄せ */
-        p {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          font-size: 15px;
-          font-weight: bolder;
-        }
-        /* 花枠画像 */
-        img {
-          width: 63.3px;
-          height: 60px;
-        }
-      }
-    }
-  }
+				&:visited {
+					color: $blue;
+				}
+			}
+			/* レポートリスト関連 */
+			li {
+				position: relative;
+				margin: 0px 20px 5px 20px;
+				/* 月名を花枠内に中央寄せ */
+				p {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+					font-size: 15px;
+					font-weight: bolder;
+				}
+				/* 花枠画像 */
+				img {
+					width: 63.3px;
+					height: 60px;
+				}
+			}
+		}
+	}
 }

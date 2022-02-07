@@ -3,34 +3,34 @@
 
 /* ---- 文字配置 ---- */
 .all-title {
-  text-align: center;
-  margin-bottom: 10px;
+	text-align: center;
+	margin-bottom: 10px;
 
-  & h1 {
-    font-size: 30px;
-    color: $cblue;
-    margin-bottom: 20px;
-  }
+	& h1 {
+		font-size: 30px;
+		color: $blue;
+		margin-bottom: 20px;
+	}
 
-  & p {
-    font-size: 15px;
-  }
+	& p {
+		font-size: 15px;
+	}
 }
 
 /* ---- フォーム部分作成 ---- */
 .main-form {
-  & #contact-form {
-    text-align: center;
-    margin: 20px 10px 0px 10px;
-    font-size: 1.4em;
+	& #contact-form {
+		text-align: center;
+		margin: 20px 10px 0px 10px;
+		font-size: 1.4em;
 
-    & .forms {
-      margin-bottom: 10px;
-    }
+		& .forms {
+			margin-bottom: 10px;
+		}
 
-    & .form-submit {
-      width: 100px;
-      height: 25px;
-    }
-  }
+		& .form-submit {
+			width: 100px;
+			height: 25px;
+		}
+	}
 }

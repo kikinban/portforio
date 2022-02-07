@@ -7,413 +7,436 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 @import "other/base_color";
 
 @media screen and (min-width: 600px) {
-  /*-----------------------------------------------------------
+	/*-----------------------------------------------------------
   左右に余白を設定
   ------------------------------------------------------------*/
-  .top-contents {
-    margin: 0px 40px;
-    width: auto;
-  }
+	.top-contents {
+		margin: 0px 40px;
+		width: auto;
+	}
 
-  /*-----------------------------------------------------------
+	/*-----------------------------------------------------------
   トップページ
   ------------------------------------------------------------*/
 
-  /*----- ヘッダー -----*/
-  header {
-    margin: 0% 10%;
-    /* ロゴアイコン */
-    #logo-960 {
-      padding-left: 0px;
-      img {
-        height: 35px;
-      }
-    }
+	/*----- ヘッダー -----*/
+	header {
+		margin: 0% 10%;
+		/* ロゴアイコン */
+		#logo-960 {
+			padding-left: 0px;
+			img {
+				height: 35px;
+			}
+		}
 
-    /* ハンバーガーメニューアイコンを非表示 */
-    .open {
-      display: none;
-    }
+		/* ハンバーガーメニューアイコンを非表示 */
+		.open {
+			display: none;
+		}
 
-    /* 隠れているナビゲーションを表示する */
-    aside {
-      position: absolute;
-      top: 0;
-      right: 10%;
-      background-color: none;
-      height: auto;
-      width: auto;
-      /* ナビゲーション位置調節 */
-      nav {
-        margin: 10px 0px 0px 10px;
-        ul {
-          display: flex;
-          justify-content: flex-end;
-          /* 下線を非表示 */
-          #header-list {
-            border-bottom: none;
-            font-size: 1.6em;
+		/* 隠れているナビゲーションを表示する */
+		aside {
+			position: absolute;
+			top: 0;
+			right: 10%;
+			background-color: none;
+			height: auto;
+			width: auto;
+			/* ナビゲーション位置調節 */
+			nav {
+				margin: 10px 0px 0px 10px;
+				ul {
+					display: flex;
+					justify-content: flex-end;
+					/* 下線を非表示 */
+					#header-list {
+						border-bottom: none;
+						font-size: 1.6em;
 
-            &:last-child {
-              display: none;
-            }
+						&:last-child {
+							display: none;
+						}
 
-            &:nth-child(4) {
-              padding-right: 0px;
-            }
-          }
-        }
-      }
-    }
-    /* ☓ボタン非表示 */
-    .close-line {
-      display: none;
-    }
-  }
+						&:nth-child(4) {
+							padding-right: 0px;
+						}
+					}
+				}
+			}
+		}
+		/* ☓ボタン非表示 */
+		.close-line {
+			display: none;
+		}
+	}
 
-  /*----- タイトル文字の枠調整 -----*/
-  body #box-fixed {
-    margin-top: 20px;
-    .box-title .titles {
-      width: 63%;
-      height: 30%;
+	/*----- タイトル文字の枠調整 -----*/
+	body #box-fixed {
+		margin-top: 20px;
+		.box-title .titles {
+			width: 63%;
+			height: 30%;
 
-      h1 {
-        font-size: 4.5em;
-      }
-    }
-  }
+			h1 {
+				font-size: 4.5em;
+			}
+		}
+	}
 
-  /*----- レポートコンテンツ -----*/
-  .top-contents {
-    margin: 0% 10%;
-    width: auto;
-    /* サイトについて */
-    .site-contents {
-      margin: 5% 0%;
-      .site-title {
-        font-size: 2.5em;
-      }
-      .site-p {
-        font-size: 1.4em;
-      }
-      .site-content {
-        font-size: 1.6em;
-        width: 100%;
-      }
-    }
-    .each-contents-1 .reports {
-      .site-p {
-        font-size: 1.4em;
-      }
-      .record-contents {
-        width: 80%;
-        .content-p {
-          font-size: 1.6em;
-          margin: 15px 0px;
-        }
+	/*----- レポートコンテンツ -----*/
+	.top-contents {
+		margin: 0% 10%;
+		width: auto;
+		h2 {
+			font-size: 2.5em;
+		}
+		p {
+			font-size: 1.4em;
+		}
 
-        .small-icon-list {
-          margin-top: 25px;
-        }
-        /* 花枠view */
-        .frame-img {
-          img {
-            width: 55.3px;
-            height: 55px;
-          }
-        }
-        .view {
-          position: absolute;
-          bottom: 21px;
-          right: 11px;
-        }
+		/* 私について */
+		.my-about {
+			.about-title {
+				font-size: 2.5em;
+			}
+			.about-p {
+				font-size: 1.4em;
+			}
+			.content-p {
+				font-size: 1.6em;
+				width: 100%;
+			}
+		}
+		/* サイトについて */
+		.site-contents {
+			margin: 5% 0%;
+			.site-title {
+				font-size: 2.5em;
+			}
+			.site-p {
+				font-size: 1.4em;
+			}
+			.site-content {
+				font-size: 1.6em;
+				width: 100%;
+			}
+			.site-content-text h3 {
+				width: 100%;
+			}
+		}
+		.each-contents-1 {
+			margin: 0 auto;
+			width: 100%;
+			.reports {
+				.site-p {
+					font-size: 1.4em;
+				}
+				.record-contents {
+					width: 80%;
+					.content-p {
+						font-size: 1.6em;
+						margin: 15px 0px;
+					}
 
-        a {
-          font-size: 1.4em;
-        }
-      }
-      h2 {
-        font-size: 2.5em;
-        margin-bottom: 10px;
-      }
+					.small-icon-list {
+						margin-top: 25px;
+					}
+					/* 花枠view */
+					.frame-img {
+						img {
+							width: 55.3px;
+							height: 55px;
+						}
+					}
+					.view {
+						position: absolute;
+						bottom: 23px;
+						right: 9px;
+					}
 
-      /* 西暦タイトル */
-      .year-number-1 {
-        font-size: 1.6em;
-      }
+					a {
+						font-size: 1em;
+					}
+				}
+				h2 {
+					font-size: 2.5em;
+					margin-bottom: 10px;
+				}
 
-      .year-number-2 {
-        font-size: 1.6em;
-      }
+				/* 西暦タイトル */
+				.year-number-1 {
+					font-size: 1.6em;
+				}
 
-      /* 花枠画像 */
-      ul li img {
-        width: 83.3px;
-        height: 80px;
-      }
-    }
+				.year-number-2 {
+					font-size: 1.6em;
+				}
 
-    /*----- ワークコンテンツ -----*/
-    .each-contents-2 {
-      .work {
-        h2 {
-          font-size: 2.5em;
-        }
-        p {
-          font-size: 1.4em;
-        }
-      }
-    }
-  }
-  .top-contents .each-contents-2 ul {
-    margin-top: 10px;
-    li {
-      width: 80px;
-      height: 80px;
-    }
-  }
+				/* 花枠画像 */
+				ul li img {
+					width: 83.3px;
+					height: 80px;
+				}
+			}
+		}
 
-  /* ---------------------------------------------------------
+		/*----- ワークコンテンツ -----*/
+		.each-contents-2 {
+			.work-content {
+				width: 100%;
+				font-size: 1.6em;
+			}
+		}
+	}
+	.top-contents .each-contents-2 ul {
+		margin-top: 10px;
+		li {
+			width: 80px;
+			height: 80px;
+		}
+	}
+
+	/* ---------------------------------------------------------
   トップページ以外のh1指定
   -----------------------------------------------------------*/
-  body .all-title {
-    font-size: 4em;
-    margin: 45px 0px;
-  }
-  /*-------------------------------------------------------------
+	body .all-title {
+		font-size: 4em;
+		margin: 45px 0px;
+	}
+	/*-------------------------------------------------------------
   プロフィールページ
   --------------------------------------------------------------*/
 
-  /*----- プロフィール詳細 -----*/
-  .profiles {
-    margin: 0% 10%;
+	/*----- プロフィール詳細 -----*/
+	.profiles {
+		margin: 0% 10%;
 
-    /* （タイトル）私について */
-    .about {
-      font-size: 1.6em;
-      width: 100px;
-      height: 18px;
-    }
+		/* （タイトル）私について */
+		.about {
+			font-size: 1.6em;
+			width: 100px;
+			height: 18px;
+		}
 
-    /* リストを横並びにする */
-    #pro-center {
-      .profile-lists {
-        font-size: 1.6em;
-      }
-    }
-    /*----- 経歴 -----*/
-    .careers {
-      /* タイトル */
-      .career-title {
-        font-size: 1.6em;
-        width: 40px;
-        height: 18px;
-      }
-      /* 保育士歴 */
-      .year {
-        font-size: 1.4em;
-      }
+		/* リストを横並びにする */
+		#pro-center {
+			.profile-lists {
+				font-size: 1.6em;
+			}
+		}
+		/*----- 経歴 -----*/
+		.careers {
+			/* タイトル */
+			.career-title {
+				font-size: 1.6em;
+				width: 40px;
+				height: 18px;
+			}
+			/* 保育士歴 */
+			.year {
+				font-size: 1.4em;
+			}
 
-      #career {
-        font-size: 1.6em;
-      }
-    }
+			#career {
+				font-size: 1.6em;
+			}
+		}
 
-    /* 3つのリスト調節 */
-    .left-pro-li {
-      margin: 0px 10px;
-    }
+		/* 3つのリスト調節 */
+		.left-pro-li {
+			margin: 0px 10px;
+		}
 
-    .right-pro-li {
-      margin: 0px 10px;
-    }
+		.right-pro-li {
+			margin: 0px 10px;
+		}
 
-    /* 業務内容 */
-    .careers #career ul li {
-      margin: 10px 10px;
-    }
-  }
+		/* 業務内容 */
+		.careers #career ul li {
+			margin: 10px 10px;
+		}
+	}
 
-  /*-------------------------------------------------------------
+	/*-------------------------------------------------------------
   レポートページ
   --------------------------------------------------------------*/
-  /* ----- 新規投稿アイコン ----- */
-  .new-input {
-    width: 80%;
-    margin: 10px auto;
-    text-align: right;
-    font-size: 1.6em;
-    vertical-align: middle;
-    .new-image {
-      position: static;
-    }
-    .new-none {
-      text-decoration: none;
-      color: $pink;
-      display: inline;
+	/* ----- 新規投稿アイコン ----- */
+	.new-input {
+		width: 80%;
+		margin: 10px auto;
+		text-align: right;
+		font-size: 1.6em;
+		vertical-align: middle;
+		.new-image {
+			position: static;
+		}
+		.new-none {
+			text-decoration: none;
+			color: $pink;
+			display: inline;
 
-      a {
-        color: $pink;
-        &:hover {
-          text-decoration: underline;
-        }
+			a {
+				color: $pink;
+				&:hover {
+					text-decoration: underline;
+				}
 
-        &:active {
-          text-decoration: none;
-        }
+				&:active {
+					text-decoration: none;
+				}
 
-        &:visited {
-          color: $cblue;
-        }
-      }
-    }
-  }
+				&:visited {
+					color: $blue;
+				}
+			}
+		}
+	}
 
-  /*----- 表 -----*/
-  .report-tables table {
-    width: 80%;
-    caption {
-      font-size: 1.6em;
-      height: 20px;
-    }
+	/*----- 表 -----*/
+	.report-tables table {
+		width: 80%;
+		caption {
+			font-size: 1.6em;
+			height: 20px;
+		}
 
-    th {
-      font-size: 1.6em;
-    }
+		th {
+			font-size: 1.6em;
+		}
 
-    td {
-      font-size: 1.6em;
-    }
-  }
+		td {
+			font-size: 1.6em;
+		}
+	}
 
-  /*----- レポートコンテンツ -----*/
-  .each-contents-1 {
-    margin: 10px 10% 10px 10%;
-    .study-title {
-      font-size: 1.6em;
-      height: 20px;
-    }
-    .study-links {
-      p {
-        a {
-          font-size: 1.6em;
-        }
-      }
+	/*----- レポートコンテンツ -----*/
+	.each-contents-1 {
+		margin: 10px 10% 10px 10%;
+		.study-title {
+			font-size: 1.6em;
+			height: 20px;
+		}
+		.study-links {
+			p {
+				a {
+					font-size: 1.6em;
+				}
+			}
 
-      img {
-        width: 16px;
-        height: 16px;
-      }
-    }
-    .reports {
-      .month-title {
-        font-size: 1.6em;
-      }
-      /* 2020年・2021年 文字サイズ */
-      .year-number-1 {
-        font-size: 100%;
-        margin: 10px;
-        font-size: 1.2em;
-      }
+			img {
+				width: 16px;
+				height: 16px;
+			}
+		}
+		.reports {
+			.month-title {
+				font-size: 1.6em;
+			}
+			/* 2020年・2021年 文字サイズ */
+			.year-number-1 {
+				font-size: 100%;
+				margin: 10px;
+				font-size: 1.2em;
+			}
 
-      .year-number-2 {
-        font-size: 100%;
-        margin: 10px;
-        font-size: 1.2em;
-      }
+			.year-number-2 {
+				font-size: 100%;
+				margin: 10px;
+				font-size: 1.2em;
+			}
 
-      /* リスト文字 */
-      ul #october {
-        a {
-          font-size: 100%;
-        }
-      }
+			/* リスト文字 */
+			ul #october {
+				a {
+					font-size: 100%;
+				}
+			}
 
-      ul li img {
-        width: 83.3px;
-        height: 83px;
-      }
-    }
-  }
+			ul li img {
+				width: 83.3px;
+				height: 83px;
+			}
+		}
+	}
 
-  /*-----------------------------------------------------------------
+	/*-----------------------------------------------------------------
   新規記録記事
   -----------------------------------------------------------------*/
 
-  .posts-forms .posts-form .post-form {
-    font-size: 1.6em;
-  }
+	.posts-forms .posts-form .post-form {
+		font-size: 1.6em;
+	}
 
-  /*-----------------------------------------------------------------
+	/*-----------------------------------------------------------------
   学習記録記事データ
   -----------------------------------------------------------------*/
 
-  .study-record {
-    h1 {
-      font-size: 40px;
-      margin: 40px;
-    }
+	.study-record {
+		h1 {
+			font-size: 40px;
+			margin: 40px;
+		}
 
-    p {
-      font-size: 1.6em;
-    }
+		p {
+			font-size: 1.6em;
+		}
 
-    .record-box-1 {
-      font-size: 1.6em;
-    }
+		.record-box-1 {
+			font-size: 1.6em;
+		}
 
-    .record-box-2 {
-      font-size: 1.6em;
-    }
+		.record-box-2 {
+			font-size: 1.6em;
+		}
 
-    .record-box-3 {
-      font-size: 1.6em;
-    }
-  }
+		.record-box-3 {
+			font-size: 1.6em;
+		}
+	}
 
-  /*-----------------------------------------------------------------
+	/*-----------------------------------------------------------------
   学習記録記事一覧
   -----------------------------------------------------------------*/
-  .main-posts-index {
-    .container {
-      margin: 0px 10%;
-      .posts-index-date {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 100%;
-        font-size: 1.6em;
+	.main-posts-index {
+		.container {
+			margin: 0px 10%;
+			.posts-index-date {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				width: 100%;
+				font-size: 1.6em;
 
-        .interval-1 {
-          margin: 10px 0px 0px 0px;
-        }
-      }
-    }
-  }
+				.interval-1 {
+					margin: 10px 0px 0px 0px;
+				}
+			}
+		}
+	}
 
-  /*-----------------------------------------------------------------
+	/*-----------------------------------------------------------------
   フッター
   -----------------------------------------------------------------*/
 
-  footer {
-    border-top: 0;
+	footer {
+		border-top: 0;
 
-    /*----- このモニタサイズからフッターを横に表示 -----*/
-    #foo-title-960 {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      li {
-        text-align: center;
-        width: auto;
-        margin: 0px 20px;
-        border-bottom: 0;
-      }
-      /* 三角を非表示 */
-      .triangle {
-        display: none;
-      }
-    }
-  }
+		/*----- このモニタサイズからフッターを横に表示 -----*/
+		#foo-title-960 {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			li {
+				text-align: center;
+				width: auto;
+				margin: 0px 20px;
+				border-bottom: 0;
+			}
+			/* 三角を非表示 */
+			.triangle {
+				display: none;
+			}
+		}
+	}
 }

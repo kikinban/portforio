@@ -24,177 +24,179 @@
 
 /* ----------     共通ヘッダー     ---------- */
 body {
-  font-family: "Kiwi Maru", serif;
-  font-size: 62.5%;
-  font-weight: 300;
-  width: 100%;
-  height: 100vh;
-  background-color: $main;
-  color: $cblue;
+	font-family: "Kiwi Maru", serif;
+	font-size: 62.5%;
+	font-weight: 300;
+	width: 100%;
+	height: 100vh;
+	background-color: $main;
+	color: $blue;
 
-  /* ハンバーガーメニュー配置 */
-  header {
-    height: 40px;
+	/* ハンバーガーメニュー配置 */
+	header {
+		height: 40px;
 
-    .logo-icon {
-      padding: 10px 0px 0px 10px;
+		.logo-icon {
+			padding: 10px 0px 0px 10px;
 
-      img {
-        width: auto;
-        height: 20px;
-        vertical-align: top;
-      }
-    }
-  }
-  /* アイコン配置 */
-  .open {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-  }
+			img {
+				width: auto;
+				height: 20px;
+				vertical-align: top;
+			}
+		}
+	}
+	/* アイコン配置 */
+	.open {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 100;
+		display: flex;
+		flex-direction: column;
+	}
 
-  /* アイコンデザイン */
-  .open-line {
-    border-top: 2px solid $cblue;
-    width: 15px;
-    height: 3px;
-    display: inline-block;
-  }
+	/* アイコンデザイン */
+	.open-line {
+		border-top: 2px solid $blue;
+		width: 15px;
+		height: 3px;
+		display: inline-block;
+	}
 
-  /* チェックボックスを隠す */
-  input[type="checkbox"] {
-    position: absolute;
-    right: -50vh;
-    display: none;
-  }
+	/* チェックボックスを隠す */
+	input[type="checkbox"] {
+		position: absolute;
+		right: -50vh;
+		display: none;
+	}
 
-  /* 出てくるヘッダー（リスト） */
-  aside {
-    position: absolute;
-    right: -80%;
-    height: 100%;
-    width: 80%;
-    transition: all 0.2s;
-    background-color: #fffef5;
-    z-index: 99;
+	/* 出てくるヘッダー（リスト） */
+	aside {
+		position: absolute;
+		right: -80%;
+		height: 100%;
+		width: 80%;
+		transition: all 0.2s;
+		background-color: #fffef5;
+		z-index: 99;
 
-    nav {
-      margin: 10px 10px 0px 10px;
+		nav {
+			margin: 10px 10px 0px 10px;
 
-      #header-list {
-        padding: 10px;
-        font-size: 1.5em;
-        text-align: center;
-        border-bottom: 1px solid $cblue;
+			#header-list {
+				padding: 10px;
+				font-size: 1.5em;
+				text-align: center;
+				border-bottom: 1px solid $blue;
 
-        a {
-          text-decoration: none;
-          color: $cblue;
+				a {
+					text-decoration: none;
+					color: $blue;
+					&:hover {
+						text-decoration: none;
+					}
 
-          &:hover {
-            text-decoration: none;
-          }
+					&:active {
+						text-decoration: none;
+					}
 
-          &:active {
-            text-decoration: none;
-          }
+					&:visited {
+						color: $blue;
+					}
+				}
 
-          &:visited {
-            color: $cblue;
-          }
-        }
+				img {
+					width: 15px;
+					height: auto;
+				}
+			}
+		}
+	}
 
-        img {
-          width: 15px;
-          height: auto;
-        }
-      }
-    }
-  }
+	/* ×ボタン表示 */
+	.close-line {
+		border-top: 2px solid $blue;
+		width: 15px;
+		display: inline-block;
+		position: absolute;
+		top: 15px;
+		right: 10px;
+	}
 
-  /* ×ボタン表示 */
-  .close-line {
-    border-top: 2px solid $cblue;
-    width: 15px;
-    display: inline-block;
-    position: absolute;
-    top: 15px;
-    right: 10px;
-  }
+	/* ×ボタンの線回転 */
+	#line-1 {
+		transform: rotate(-45deg);
+	}
 
-  /* ×ボタンの線回転 */
-  #line-1 {
-    transform: rotate(-45deg);
-  }
+	#line-2 {
+		transform: rotate(45deg);
+	}
 
-  #line-2 {
-    transform: rotate(45deg);
-  }
+	/* クリック時に、リスト表示が右寄りに配置 */
+	input[type="checkbox"]:checked ~ aside {
+		right: 0;
+	}
 
-  /* クリック時に、リスト表示が右寄りに配置 */
-  input[type="checkbox"]:checked ~ aside {
-    right: 0;
-  }
+	/* クリック時にアイコンが消える */
+	input[type="checkbox"]:checked ~ .open {
+		display: none;
+	}
 
-  /* クリック時にアイコンが消える */
-  input[type="checkbox"]:checked ~ .open {
-    display: none;
-  }
+	/* クリック時に出てくる半透明の画面 */
+	input[type="checkbox"]:checked ~ .back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: white;
+		opacity: 0.5;
+		z-index: 99;
+	}
 
-  /* クリック時に出てくる半透明の画面 */
-  input[type="checkbox"]:checked ~ .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: white;
-    opacity: 0.5;
-    z-index: 99;
-  }
-
-  /*-------------------------------------------------------
+	/*-------------------------------------------------------
   トップページ以外のh１・p指定
   -------------------------------------------------------*/
-  .all-title {
-    font-size: 3em;
-    margin: 20px 0px;
-    text-align: center;
-  }
+	.all-title {
+		font-size: 3em;
+		margin: 20px 0px;
+		text-align: center;
+	}
 
-  .description {
-    font-size: 1.4em;
-    text-align: center;
-  }
+	.description {
+		font-size: 1.4em;
+		text-align: center;
+	}
 }
 
 /* ----------     共通フッター     ---------- */
 footer {
-  margin: 0px 10px 0px 10px;
-  border-top: solid 2px yellowgreen;
+	margin: 10px;
+	border-top: solid 2px yellowgreen;
 
-  ul.foo_title {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    bottom: 0;
+	ul.foo_title {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		bottom: 0;
 
-    & > li {
-      width: 355px;
-      font-size: 15px;
-      color: $cblue;
-      border-bottom: solid 2px yellowgreen;
-      padding: 5px 0px;
-      width: 100%;
-    }
-  }
+		& > li {
+			width: 355px;
+			font-size: 15px;
+			color: $blue;
+			border-bottom: solid 2px yellowgreen;
+			padding: 5px 0px;
+			width: 100%;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
 
-  #copywriter {
-    font-size: 12px;
-    text-align: center;
-    margin: 5px 0px;
-  }
+	#copywriter {
+		font-size: 12px;
+		text-align: center;
+		padding-top: 20px;
+	}
 }
 
 // ~ デバイスの大きさに合わせて適用される ~

@@ -11,7 +11,7 @@
 
 /*----- ヘッダーとフッターの間 -----*/
 main {
-  width: 100%;
+	width: 100%;
 }
 
 /*-------------------------------------------------------------------------
@@ -19,48 +19,48 @@ main {
 --------------------------------------------------------------------------*/
 
 #box-fixed {
-  position: relative;
-  display: block;
-  width: 100%;
+	position: relative;
+	display: block;
+	width: 100%;
 
-  /* タイトル文字配置ボックス */
-  .box-title {
-    height: 81%;
-    width: 74%;
-    position: absolute;
-    top: 0;
-    /* タイトルボックス */
-    .titles {
-      position: absolute;
-      width: 67%;
-      height: 34%;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
+	/* タイトル文字配置ボックス */
+	.box-title {
+		height: 81%;
+		width: 74%;
+		position: absolute;
+		top: 0;
+		/* タイトルボックス */
+		.titles {
+			position: absolute;
+			width: 67%;
+			height: 34%;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
 
-      h1 {
-        font-size: 2.5em;
-        text-shadow: 0px 1px 1px #424a50;
-        font-weight: 100;
-        color: $cblue;
-        position: absolute;
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
-  /* メイン画像 */
+			h1 {
+				font-size: 2.5em;
+				text-shadow: 0px 1px 1px #424a50;
+				font-weight: 100;
+				color: $blue;
+				position: absolute;
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+	/* メイン画像 */
 
-  .main-image {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    top: 0;
-    opacity: 0.7;
-  }
+	.main-image {
+		width: 80%;
+		height: 100%;
+		top: 0;
+		opacity: 0.7;
+		margin: 10%;
+	}
 }
 
 /*-------------------------------------------------------------------------
@@ -69,234 +69,323 @@ main {
 
 /* コンテンツタイトル文字 */
 .top-contents {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 61%;
-  margin: 10px 0px;
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 61%;
+	margin: 10px 0px;
+	text-align: center;
 
-  /* (共通)レポート・ワークタイトル文字 */
-  h2 {
-    font-size: 1.8em;
-    font-weight: 100;
-    margin: 0px 0px 5px 0px;
-    color: $cblue;
-  }
+	/* (共通)レポート・ワークタイトル文字 */
+	h2 {
+		font-size: 1.8em;
+		font-weight: 100;
+		margin: 0px 0px 5px 0px;
+		color: $blue;
+	}
 
-  p {
-    color: $cblue;
-    font-weight: 100;
-    margin-bottom: 10px;
-  }
+	p {
+		color: $blue;
+		font-weight: 100;
+		margin-bottom: 10px;
+		margin-top: 8px;
+	}
+	/* 私について全体 */
+	.my-about {
+		margin-bottom: 20px;
+	}
+	/* 内容 */
+	.content-p {
+		text-align: left;
+		font-size: 1.4em;
+		width: 90%;
+		margin: 20px auto;
+		line-height: 1.5;
+		text-indent: 0.5em;
+		margin: 0 auto;
+	}
 
-  /* 月リンク */
-  .header-link {
-    height: 19px;
-    color: $cblue;
-    text-decoration: none;
-    /* クリック関連 */
-    &:hover {
-      text-decoration: underline;
-    }
+	/* 月リンク */
+	.header-link {
+		height: 19px;
+		color: $blue;
+		text-decoration: none;
+		/* クリック関連 */
+		&:hover {
+			text-decoration: underline;
+		}
 
-    &:active {
-      text-decoration: none;
-    }
+		&:active {
+			text-decoration: none;
+		}
 
-    &:visited {
-      color: $cblue;
-    }
-  }
-  /* ---- サイトについて ---- */
-  .site-contents {
-    text-align: center;
+		&:visited {
+			color: $blue;
+		}
+	}
 
-    .site-title {
-      font-size: 1.8em;
-    }
+	/* ---- サイトについて ---- */
+	.site-contents {
+		margin-top: 20px;
+		.site-title {
+			font-size: 1.8em;
+		}
 
-    .site-p {
-      margin-top: 5px;
-    }
+		.site-p {
+			margin-top: 5px;
+		}
 
-    .site-content {
-      text-align: left;
-      font-size: 1.4em;
-      width: 90%;
-      margin: 20px auto;
-      line-height: 1.5;
+		.site-content-text {
+			h3 {
+				font-size: 1.8em;
+				margin: 10px 0px;
+				font-weight: 300;
+				border-bottom: solid 1px $pink;
+				padding: 5px;
+				text-align: left;
+				margin: 10px auto;
+				width: 90%;
+			}
+		}
+		.site-content {
+			text-align: left;
+			font-size: 1.4em;
+			width: 90%;
+			margin: 20px auto;
+			line-height: 1.5;
+			text-indent: 0.5em;
+			margin: 0 auto;
+		}
+	}
 
-      h3 {
-        font-size: 1.2em;
-        margin: 10px 0px;
-        font-weight: 300;
-        border-bottom: solid 1px $pink;
-        padding: 3px;
-      }
-    }
-  }
-  /* ---- レポート関連 ---- */
-  .each-contents-1 {
-    text-align: center;
-    position: relative;
-    height: 63%;
-    margin-bottom: 10px;
+	/* ---- スライドショー装飾 ---- */
+	.slider {
+		margin: 0 auto;
+		overflow: hidden;
+		display: flex;
+	}
+	.slider-item {
+		margin: 0 5px;
+		width: 250px;
+	}
+	img {
+		width: 100%;
+		opacity: 0.5;
+	}
+	.slider-inner {
+		animation: slider 15s infinite linear 1s both;
+		display: flex;
+	}
 
-    .reports {
-      display: inline-block;
-      position: relative;
-      width: 100%;
+	@keyframes slider {
+		0% {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-100%);
+		}
+	}
 
-      /* ---- 学習記録リンク ---- */
-      .record-contents {
-        text-align: left;
-        position: relative;
-        margin: 25px auto;
-        width: 70%;
+	/* ---- レポート関連 ---- */
+	.each-contents-1 {
+		text-align: center;
+		position: relative;
+		height: 63%;
+		margin-bottom: 10px;
 
-        .content-p {
-          font-size: 1.2em;
-        }
+		.reports {
+			display: inline-block;
+			position: relative;
+			width: 100%;
 
-        /* 新規投稿・全記録一覧リンク */
-        .small-icon-list {
-          display: flex;
-          margin-top: 15px;
-          .record-icon {
-            img {
-              width: 14px;
-              height: 14px;
-              margin-right: 5px;
-            }
-          }
+			/* ---- 学習記録リンク ---- */
+			.record-contents {
+				text-align: left;
+				position: relative;
+				margin: 25px auto;
+				width: 70%;
 
-          .new-record-icon {
-            margin-right: 10px;
-          }
-        }
-        /* 花枠view */
-        .frame-img {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          transform: rotate(10deg);
+				.content-p {
+					font-size: 1.2em;
+				}
 
-          img {
-            width: 40.3px;
-            height: 40px;
-          }
-        }
-        .view {
-          position: absolute;
-          bottom: 17px;
-          right: 9px;
-          transform: rotate(10deg);
-          font-weight: 400;
-        }
-        /* リンクデザイン */
-        a {
-          text-decoration: none;
-          color: $cblue;
-          font-size: 1em;
-          vertical-align: middle;
-        }
-        &:hover {
-          text-decoration: underline;
-        }
+				/* 新規投稿・全記録一覧リンク */
+				.small-icon-list {
+					display: flex;
+					margin-top: 15px;
+					.record-icon {
+						img {
+							width: 14px;
+							height: 14px;
+							margin-right: 5px;
+						}
+					}
 
-        &:active {
-          text-decoration: none;
-        }
+					.new-record-icon {
+						margin-right: 10px;
+					}
+				}
+				/* 花枠view */
+				.frame-img {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					transform: rotate(10deg);
 
-        &:visited {
-          color: $cblue;
-        }
-      }
-      /* 学習記録タイトル */
-      .record-title {
-        margin-bottom: 10px;
-      }
-      /* 2020年・2021年 文字サイズ */
-      .year-number-1 {
-        font-size: 1.2em;
-      }
+					img {
+						width: 40.3px;
+						height: 40px;
+					}
+				}
+				.view {
+					position: absolute;
+					bottom: 17px;
+					right: 7px;
+					transform: rotate(10deg);
+					font-weight: 400;
+				}
+				/* リンクデザイン */
+				a {
+					text-decoration: none;
+					color: $blue;
+					font-size: 1em;
+					vertical-align: middle;
+				}
+				&:hover {
+					text-decoration: underline;
+				}
 
-      .year-number-2 {
-        font-size: 1.2em;
-      }
+				&:active {
+					text-decoration: none;
+				}
 
-      /* 月ごとリスト */
-      ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+				&:visited {
+					color: $blue;
+				}
+			}
+			/* 学習記録タイトル */
+			.record-title {
+				margin-bottom: 10px;
+			}
+			/* 2020年・2021年 文字サイズ */
+			.year-number-1 {
+				font-size: 1.2em;
+			}
 
-        /* クリック関連 */
-        .october {
-          a {
-            text-decoration: none;
-            color: $cblue;
-            font-size: 1.2em;
-          }
-          &:hover {
-            text-decoration: underline;
-          }
+			.year-number-2 {
+				font-size: 1.2em;
+			}
 
-          &:active {
-            text-decoration: none;
-          }
+			/* 月ごとリスト */
+			ul {
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
 
-          &:visited {
-            color: $cblue;
-          }
-        }
-        /* レポートリスト関連 */
-        li {
-          position: relative;
-          margin: 0px 20px 5px 20px;
-          /* 月名を花枠内に中央寄せ */
-          p {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size: 1.2em;
-            font-weight: bolder;
-          }
-          /* 花枠画像 */
-          img {
-            width: 63.3px;
-            height: 60px;
-          }
-        }
-      }
-    }
-  }
+				/* クリック関連 */
+				.october {
+					a {
+						text-decoration: none;
+						color: $blue;
+						font-size: 1.2em;
+					}
+					&:hover {
+						text-decoration: underline;
+					}
 
-  /* ---- ワーク関連 ---- */
-  .each-contents-2 {
-    text-align: center;
-    position: relative;
-    height: 40%;
+					&:active {
+						text-decoration: none;
+					}
 
-    /* 四角リスト */
-    ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style: none;
+					&:visited {
+						color: $blue;
+					}
+				}
+				/* レポートリスト関連 */
+				li {
+					position: relative;
+					margin: 0px 20px 5px 20px;
+					/* 月名を花枠内に中央寄せ */
+					p {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						-webkit-transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%);
+						font-size: 1.2em;
+						font-weight: bolder;
+					}
+					/* 花枠画像 */
+					img {
+						width: 63.3px;
+						height: 60px;
+					}
+				}
+			}
+		}
+	}
 
-      li {
-        width: 60px;
-        height: 60px;
-        border: 2px solid pink;
-        margin: 0px 20px 5px 20px;
-      }
-    }
-  }
+	/* ---- ワーク関連 ---- */
+	.each-contents-2 {
+		text-align: center;
+		position: relative;
+		height: 40%;
+		.work-size {
+			height: 200px;
+		}
+
+		.work-size-images {
+			display: flex;
+			justify-content: center;
+			margin: 40px 0;
+
+			.work-size_parent {
+				margin: 0 20px;
+			}
+			.work-size_administar {
+				margin: 0 20px;
+			}
+			img {
+				width: 70%;
+				opacity: 1;
+				width: 90%;
+				height: 90%;
+				margin: 0 10px;
+			}
+			p {
+				border-bottom: solid 2px $pink;
+				margin: 10px auto;
+				width: 50%;
+				padding-bottom: 5px;
+			}
+		}
+		/* 四角リスト */
+		ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			list-style: none;
+
+			li {
+				width: 60px;
+				height: 60px;
+				border: 2px solid pink;
+				margin: 0px 20px 5px 20px;
+			}
+		}
+		.work-content {
+			text-align: left;
+			font-size: 1.4em;
+			width: 90%;
+			margin: 20px auto;
+			line-height: 1.5;
+			text-indent: 0.5em;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+	}
 }
 
 // ~ デバイスの大きさに合わせて適用される ~
