@@ -3,10 +3,24 @@
   <div class="container">
     <h1 class="all-title">Study Records</h1>
     <div class="posts-index-date">
+      <table>
+        <thead>
+          <tr>
+            <th>日付</th>
+            <th>勉強時間</th>
+            <th>一覧</th>
+          </tr>
+        </thead>
+        <tbody>
         <% @posts.each do |post| %> 
-          <p class="interval-1"><%= link_to(post.date, "/study_records/#{post.id}") %> </p>
+          <tr>
+            <td><%= post.date.strftime("%Y年%m月%d日") %></td>
+            <td><%= post.time %>時間<%= post.minute %>分</td>
+            <td><%= link_to("詳細", "/study_records/#{post.id}") %></td>
+          </tr>
         <% end %>
-
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
