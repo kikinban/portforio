@@ -5,8 +5,8 @@
         <div class="titles">
         </div>
     </div>
-     
-     <%# タイトル文字付与 %>
+    
+    <%# タイトル文字付与 %>
     <img class="main-image" src="/titlelogo.png" alt="">
 </div>
 
@@ -14,64 +14,141 @@
 
 <%# 全体コンテンツ（2部構成 %>
 <div class="top-contents">
-    <div class="site-contents">
-        <h2 class="site-title">About This Website</h2>
-        <p class="site-p">サイトについて</p>
-        <div class="site-content">
-            <h3>初めてのポートフォリオ作り</h3>
-            <p>作成する上で気を付けたことは、見やすく・操作しやすい点についてです。<br>
-            カラーは5色に限定し、統一感を意識しました。<br>
-            見た時に柔らかい印象を感じれるように、デザインや画像を考えています。
-            レスポンシブデザインには4つのブレイクポイントを設定し、
-            画面サイズに合わせたレイアウト・デザインにも力を入れ細かく調節しました。
-            </p>
-            <p>また、学習記録を管理するシステムを作りました。<br>
-            データベースを利用してシステム開発することは、初めての為難しかったです。
-            しかし自分のイメージ通りにデータを取得出来るようになってくると、魅力を感じました。
-            このシステムは学習内容の振り返りが出来る為、現在も活用しています。
-            </p>
-            <p>独学で一からサイトを作成するのは、大変でした。<br>
-            しかしそれ以上に自分のイメージしたことを形に出来る嬉しさや楽しさを感じています。<br>
-            またデザインやプログラミングについて、より理解を深めたいと思いました。<br>
-            この気持ちを大切に、今後も新たなことに挑戦していきます。
-            </p>
-        </div>
+  <%# 私について %>
+  <div class="my-about">
+    <h2 class="about-title">My About</h2>
+    <p class="about-p">私について</p>
+    <div>
+      <p class="content-p">私は就職してから7年間保育士という職業に就き、現在も担任として勤務しています。
+        一から企画を考え実施したり、自分の感性を元に様々な製作物を完成させてきました。<br>
+        またワードやエクセル等の資格を取得しているので、書類作成やパンフレット等のデザインを
+        任されることが多かったです。
+        次第にパソコンでの業務が大半を占めるようになりました。
+      </p>
+      <p class="content-p">
+        日々やりがいを感じる中、今度は自分で一からデザインしてみたい、サービスを作ってみたい、
+        IT業界で働いてみたいと思うようになります。それがきっかけで一昨年の10月頃から、独学で
+        プログラミングを学んできました。現職の仕事と両立しながら、勉強を続けポートフォリオを
+        完成させています。
+      </p>
+      <p class="content-p">
+        今までの人生、自分の目標に向けてたくさんの努力をしてきました。今後
+        も目の前の目標に向けて努力し続け、不撓不屈の精神で頑張っていきたいです。
+      </p>
     </div>
+  </div>
+  <%# ワークコンテンツ %>
+  <div class="each-contents-2">
+    <div class="works">
+      <div class="work-site">
+        <h2 class="work-title"><%= link_to("Homepage Work", "/work", class: "header-link") %></h2>
+        <p class="site-p">ホームページ作品</p>
+        <p class="work-content">
+        このポートフォリオ作成の後に「保育に関するシステム」を作りました。
+        自分があったらいいなと思う機能を取り入れ、実装するように心がけて作っています。
+        教材では知ることができない内容も多く、苦戦した部分もありました。<br>
+        しかし自分にとって大きな経験となり、コードをたくさん書き換えながら多くのことを
+        学ぶことが出来たので良かったです。
+        独学した当初には理解出来なかった文法やコードを理解出来るようになり、よりプログラミング
+        の楽しさを知ることが出来ました。
+        </p>
+        <div class="work-size-images">
+          <div class="work-size_parent">
+            <p>保護者ページ</p>
+            <%= link_to("/report") do %><%= image_tag("/parents.jpg", class: "work-image")  %><% end %>
+          </div>
+          <div class="work-size_administar">
+            <p>管理者ページ</p>
+            <%= link_to("/report") do %><%= image_tag("/administars.jpg", class: "work-image")  %><% end %>
+          </div>
+        </div>
+      <div>
+      <div class="children-works">
+        <div class="work-site">
+          <h2 class="work-title"><%= link_to("Work Of Art", "/work", class: "header-link") %></h2>
+          <p class="site-p">製作作品</p>
+        <div>
+        <div>
+          <p class="work-content">プログラミングの独学と併行して、作った製作物です。
+          退勤後にAdobe Photoshopやはさみを使用して、製作しました。
+          全て自分でデザインし、子どもが楽しめるよう考えて作っています。
+          毎月、行事や季節に合わせて工夫していました。<br>
+          （スケッチブックシアター・マグネットシアター・ペープサート等作成）
+          </p>
+        </div>
+        <%# 画像をスライドショーして表示 %>
+        <div class="slider">
+          <div class="slider-inner">
+            <div class="slider-item"><%= image_tag "/halloween.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/sweet.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/balloon.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/christmas.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/sneeze.JPG" %></div>
+          </div>
+          <div class="slider-inner">
+            <div class="slider-item"><%= image_tag "/halloween.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/sweet.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/balloon.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/christmas.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/sneeze.JPG" %></div>
+          </div>
+          <div class="slider-inner">
+            <div class="slider-item"><%= image_tag "/halloween.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/sweet.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/balloon.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/christmas.JPG" %></div>
+            <div class="slider-item"><%= image_tag "/sneeze.JPG" %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="site-contents">
+    <h2 class="site-title">About This Website</h2>
+    <p class="site-p">サイトについて</p>
+    <div class="site-content-text">
+      <h3>初めてのポートフォリオ作り</h3>
+      <div>
+        <p class="site-content">作成する上で気を付けたことは、見やすく・操作しやすい点についてです。
+        カラーは5色に限定し、統一感を意識しました。
+        見た時に柔らかい印象を感じれるように、デザインや画像を考えています。
+        レスポンシブデザインには4つのブレイクポイントを設定し、
+        画面サイズに合わせたレイアウト・デザインにも力を入れ細かく調節しました。
+        </p>
+        <p class="site-content">また、学習記録を管理するシステムを作りました。
+        データベースを利用してシステム開発することは、初めての為難しかったです。
+        しかし自分のイメージ通りにデータを取得出来るようになってくると、魅力を感じました。
+        このシステムは学習内容の振り返りが出来る為、現在も活用しています。
+        </p>
+        <p class="site-content">独学で一からサイトを作成するのは、大変でした。
+        しかしそれ以上に自分のイメージしたことを形に出来る嬉しさや楽しさを感じています。
+        またデザインやプログラミングについて、より理解を深めたいと思いました。
+        この気持ちを大切に、今後も新たなことに挑戦していきます。
+        </p>
+      </div>
+    </div>
+  </div>
+
+
     <%# レポートコンテンツ %>
-    <div class="each-contents-1">
-        <div class="reports">
-            <h2 class="record-title"><%= link_to("Study Records", "/report", class: "header-link") %></h2>
-            <p class="site-p">学習記録</p>
-            <div class="record-contents">
-                <p class="content-p">2020年10月から、独学で勉強スタート</p>
-                <p class="content-p">学習内容を日ごとに記録</p>
-                <div class="small-icon-list">
-                    <p class="record-icon"><%= link_to("/study_records/new") do %><%= image_tag("/new_blue.png") %><% end %></p>
-                    <p class="new-record-icon"><%= link_to("新規記録","/study_records/new")%></p>
-                    <p class="record-icon"><%= link_to("/study_records/index", class: "study-icon" ) do %><%= image_tag("/date.png") %><% end %></p>
-                    <p><%= link_to("全記録一覧","/study_records/index")%></p>
-                </div>
-                <p class="frame-img"><%= link_to("/report") do %><%= image_tag("/hanawaku.png") %><% end %></p>
-                <p class="view"><%= link_to("view","/report")%></p>
-            </div>
+  <div class="each-contents-1">
+    <div class="reports">
+      <h2 class="record-title"><%= link_to("Study Records", "/report", class: "header-link") %></h2>
+      <p class="site-p">学習記録</p>
+      <div class="record-contents">
+        <p class="content-p">2020年10月から、独学で勉強スタート</p>
+        <p class="content-p">学習内容を日ごとに記録（令和3年5月まで）</p>
+        <div class="small-icon-list">
+            <p class="record-icon"><%= link_to("/") do %><%= image_tag("/new_blue.png") %><% end %></p>
+            <p class="new-record-icon"><%= link_to("新規記録","/study_records/new")%></p>
+            <p class="record-icon"><%= link_to("/study_records/index", class: "study-icon" ) do %><%= image_tag("/date.png") %><% end %></p>
+            <p><%= link_to("全記録一覧","/study_records/index")%></p>
         </div>
+        <p class="frame-img"><%= link_to("/report") do %><%= image_tag("/hanawaku.png") %><% end %></p>
+        <p class="view">View</p>
+      </div>
     </div>
-    
-    <%# ワークコンテンツ %>
-    <div class="each-contents-2">
-        <div class="works">
-            <div class="work">
-                <h2 class="work-title"><%= link_to("Produces", "/work", class: "header-link") %></h2>
-                <p class="site-p">製作</p>
-                <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                </ul>
-            <div>
-        </div>
-    </div>
+  </div>
 </div>

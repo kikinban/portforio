@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;500&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -49,16 +49,20 @@
     </header>
 
     <%# 別ファイルのボディタグが反映される %>
-    <main><%= yield %></main>
+    <main>
+    
+      <%= yield %>
+
+    </main>
 
     <%# 共通フッター %>
     <footer>
-        <ul id="foo-title-960"class="foo_title">
-          <li><span class="triangle">▶</span>TOP</li>
-          <li><span class="triangle">▶</span>PROFIILE</li>
-          <li><span class="triangle">▶</span>REPORTS</li>
-        </ul>
-        <p id="copywriter">© 2021 Kohata Misa</p>
+      <ul id="foo-title-960"class="foo_title">
+        <li><span class="triangle">▶</span><%= link_to("TOP","/")%></li>
+        <li><span class="triangle">▶</span><%= link_to("PROFILE", "/profile", class: "header-link") %></li>
+        <li><span class="triangle">▶</span><%= link_to("REPORTS", "/report", class: "header-link") %></li>
+      </ul>
+      <p id="copywriter">© 2021 Kohata Misa</p>
     </footer>
   </body>
 </html>
