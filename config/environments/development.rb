@@ -81,6 +81,9 @@ Rails.application.configure do
   # ↑2行追加
 
   #ホワイトリストを追記
+  config.web_console.whitelisted_ips = '172.31.8.220'
+  config.web_console.whitelisted_ips = '60.132.246.132'
+  config.web_console.whitelisted_ips = '172.31.42.162'
   config.web_console.whitelisted_ips = '0.0.0.0/0'
 
 end
