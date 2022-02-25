@@ -76,9 +76,9 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   #追加 本番環境でドメインを指定
-  config.hosts << "my.km-portforio.com"
+  #config.hosts << "my.km-portforio.com"
 
-  config.hosts.clear
+  #config.hosts.clear
 
   # ↑2行追加
 end
