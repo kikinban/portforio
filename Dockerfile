@@ -6,7 +6,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 RUN apt-get update -qq && apt-get install -y  nodejs default-mysql-client yarn
 # RailsのインストールやMySQLへの接続に必要なパッケージをインストール
 RUN mkdir /myapp
-# コンテナ内にmyappディレクトリを作成
+# コンテナ内にmyappディレクトリを作成apt
 WORKDIR /myapp
 # 作成したmyappディレクトリを作業用ディレクトリとして設定
 COPY Gemfile /myapp/Gemfile
