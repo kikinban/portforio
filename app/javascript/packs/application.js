@@ -4,8 +4,10 @@
 // that code so it'll be compiled.
 
 
-
+Rails.start()
 ActiveStorage.start()
 require("channels")
+require('jquery')
+
 
 
