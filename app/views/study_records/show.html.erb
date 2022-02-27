@@ -34,11 +34,13 @@
         <p><%= link_to("編集する", "/study_records/#{@post.id}/edit") %></p>
         <p><%= link_to("削除する", "/study_records/#{@post.id}/destroy", method: :delete ) %></p>
     </div>
-    <% if @post.previous.present? %>
-    <%= link_to "前ページ", show_path(@post.previous) %>
-    <% end %>
-    <% if @post.next.present? %>
-    <%= link_to "次ページ", show_path(@post.next) %>
-    <% end %>
+    <div class="page-button">
+      <% if @post.previous.present? %>
+      <%= link_to "前ページ", show_path(@post.previous) %>
+      <% end %>
+      <% if @post.next.present? %>
+      <%= link_to "次ページ", show_path(@post.next) %>
+      <% end %>
+    </div>
 </div>
 

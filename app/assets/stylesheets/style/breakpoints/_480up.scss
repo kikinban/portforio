@@ -7,45 +7,52 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 @import "other/base_color";
 
 @media screen and (min-width: 480px) {
-  /*-----------------------------------------------------------
+	/*-----------------------------------------------------------
   トップページ
   ------------------------------------------------------------*/
 
-  /*----- タイトル文字の枠調整 -----*/
-  body #box-fixed .box-title .titles {
-    width: 61%;
-    height: 27%;
+	/*----- タイトル文字の枠調整 -----*/
+	body #box-fixed .box-title .titles {
+		width: 61%;
+		height: 27%;
 
-    h1 {
-      font-size: 3.5em;
-    }
-  }
+		h1 {
+			font-size: 3.5em;
+		}
+	}
 
-  /*----- レポートコンテンツ -----*/
-  /* リストの折返し指定を解除 */
-  .top-contents .each-contents-1 .reports ul {
-    flex-wrap: none;
+	/*----- レポートコンテンツ -----*/
+	/* リストの折返し指定を解除 */
+	.top-contents .each-contents-1 .reports ul {
+		flex-wrap: none;
 
-    li {
-      margin: 0px 10px 5px 10px;
-    }
-  }
+		li {
+			margin: 0px 10px 5px 10px;
+		}
+	}
 
-  /*----- ワークコンテンツ -----*/
-  .top-contents .each-contents-2 ul {
-    flex-wrap: none;
+	/*----- ワークコンテンツ -----*/
+	.top-contents .each-contents-2 ul {
+		flex-wrap: none;
 
-    li {
-      margin: 0px 10px 5px 10px;
-    }
-  }
+		li {
+			margin: 0px 10px 5px 10px;
+		}
+	}
 
-  /*-----------------------------------------------------------------
+	/*-----------------------------------------------------------------
+  学習記録記事データ
+  -----------------------------------------------------------------*/
+	.study-record {
+		margin: 0 5%;
+	}
+
+	/*-----------------------------------------------------------------
   フッター
   -----------------------------------------------------------------*/
 
-  /* フッターリスト */
-  footer ul#foo_title > li {
-    width: 100%;
-  }
+	/* フッターリスト */
+	footer ul#foo_title > li {
+		width: 100%;
+	}
 }

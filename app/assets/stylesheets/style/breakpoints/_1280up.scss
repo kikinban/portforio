@@ -56,6 +56,10 @@ Stylesheet: 1280px以上のモニタで適用
 		.each-contents-2 {
 			margin: 5% 0%;
 		}
+
+		.top-contents .each-contents-1 .reports .record-contents {
+			width: 55%;
+		}
 	}
 
 	/* ---------------------------------------------------------
@@ -142,14 +146,11 @@ Stylesheet: 1280px以上のモニタで適用
   学習記録記事データ
   -----------------------------------------------------------------*/
 
-	.study-records {
+	.study-record {
+		margin: 0 13%;
 		h1 {
 			font-size: 60px;
 			margin: 40px;
-		}
-
-		p {
-			font-size: 100%;
 		}
 	}
 

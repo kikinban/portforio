@@ -17,6 +17,7 @@ Postsテーブルに関するcssファイル
 
 .posts-forms {
 	width: 100%;
+	margin: 0 10%;
 	// 入力フォームデザイン
 	.posts-form {
 		width: 80%;
@@ -109,6 +110,7 @@ Postsテーブルに関するcssファイル
 		margin: 0 20px;
 		margin-bottom: 10px;
 		white-space: pre-wrap;
+		text-indent: 1em;
 	}
 
 	.record-box-2 {
@@ -117,6 +119,7 @@ Postsテーブルに関するcssファイル
 		margin: 0 20px;
 		margin-bottom: 10px;
 		white-space: pre-wrap;
+		padding-left: 1em;
 	}
 
 	.record-box-3 {
@@ -125,14 +128,44 @@ Postsテーブルに関するcssファイル
 		margin: 0 20px;
 		margin-bottom: 10px;
 		white-space: pre-wrap;
+		text-indent: 1em;
 	}
 
 	/* 編集・削除ボタンの位置 */
 	.link-button {
 		display: flex;
+		justify-content: center;
 
 		p {
 			border-bottom: 0;
+			a {
+				text-decoration: none;
+				color: #1f3a50;
+			}
+			a:visited {
+				color: #1f3a50;
+			}
+			a:link {
+				color: #1f3a50;
+			}
+		}
+	}
+
+	/* 前・次ページボタン */
+	.page-button {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.4em;
+		margin: 0 5%;
+		a {
+			text-decoration: none;
+			color: #1f3a50;
+		}
+		a:visited {
+			color: #1f3a50;
+		}
+		a:link {
+			color: #1f3a50;
 		}
 	}
 }
@@ -157,6 +190,7 @@ Postsテーブルに関するcssファイル
 		.posts-index-date {
 			text-align: center;
 			font-size: 1.4em;
+			margin: 0 auto;
 			table {
 				border: solid 2px #fdb1ba;
 				tr {
@@ -172,6 +206,13 @@ Postsテーブルに関するcssファイル
 				}
 				a {
 					text-decoration: none;
+					color: #1f3a50;
+				}
+				a:visited {
+					color: #1f3a50;
+				}
+				a:link {
+					color: #1f3a50;
 				}
 			}
 
