@@ -4,10 +4,12 @@
 // that code so it'll be compiled.
 
 
-Rails.start()
-ActiveStorage.start()
-require("channels")
-require('jquery')
+//= require jquery
+//= require jquery.turbolinks
+//= require rails-ujs
+//= require activestorage
+//= require turbolinks
+//= require_tree .
 
 
 
