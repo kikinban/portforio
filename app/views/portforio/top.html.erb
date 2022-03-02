@@ -44,7 +44,7 @@
         <h2 class="work-title"><%= link_to("Homepage Work", "/work", class: "header-link") %></h2>
         <p class="site-p">ホームページ作品</p>
         <p class="work-content">
-        このポートフォリオ作成の後に「保育に関するシステム」を作りました。
+        このポートフォリオ作成の後に「保育システム」を作りました。
         自分があったらいいなと思う機能を取り入れ、実装するように心がけて作っています。
         教材では知ることができない内容も多く、苦戦した部分もありました。<br>
         しかし自分にとって大きな経験となり、コードをたくさん書き換えながら多くのことを
@@ -52,6 +52,9 @@
         独学した当初には理解出来なかった文法やコードを理解出来るようになり、よりプログラミング
         の楽しさを知ることが出来ました。
         </p>
+        <div>
+          <%= link_to("保育システムの開発経緯・内容・感想", "https://docs.google.com/document/d/1V1GTSLcvCo0wDXljlXUykABxaUiWQBQjI-aiG13Dv1E/preview", class: "thoughts_content") %>
+        </div>
         <div class="work-size-images">
           <div class="work-size_parent">
             <p>保護者ページ</p>
@@ -128,6 +131,9 @@
         この気持ちを大切に、今後も新たなことに挑戦していきます。
         </p>
       </div>
+      <div>
+        <%= link_to("ポートフォリオの開発経緯・内容・感想", "https://docs.google.com/document/d/1V1GTSLcvCo0wDXljlXUykABxaUiWQBQjI-aiG13Dv1E/preview", class: "thoughts_content") %>
+      </div>
     </div>
   </div>
 
@@ -137,6 +143,12 @@
     <div class="reports">
       <h2 class="record-title"><%= link_to("Study Records", "/report", class: "header-link") %></h2>
       <p class="site-p">学習記録</p>
+    <div>
+      <p class="content-p">AWSを利用して、サイトを公開した内容・感想</p>
+      <p><%= link_to("View","")%></p>
+    </div>
+
+
       <div class="record-contents">
         <p class="content-p">2020年10月から、独学で勉強スタート</p>
         <p class="content-p">学習内容を日ごとに記録（令和3年5月まで）</p>
