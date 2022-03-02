@@ -372,6 +372,32 @@ main {
 				margin: 0px 20px 5px 20px;
 			}
 		}
+
+		/* 保育システムの感想・内容リンク */
+		.site-thoughts {
+			.thoughts-content {
+				a {
+					text-decoration: none;
+					color: $blue;
+					border: dashed 2px yellowgreen;
+					padding: 5px;
+					border-radius: 5px;
+					&:hover {
+						text-decoration: underline;
+					}
+
+					&:active {
+						text-decoration: none;
+					}
+
+					&:visited {
+						color: $blue;
+					}
+				}
+			}
+		}
+
+		/* ホームページの内容 */
 		.work-content {
 			text-align: left;
 			font-size: 1.4em;
