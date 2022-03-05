@@ -43,6 +43,7 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 			background-color: none;
 			height: auto;
 			width: auto;
+			display: block;
 			/* ナビゲーション位置調節 */
 			nav {
 				margin: 10px 0px 0px 10px;
@@ -290,6 +291,7 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 
 			a {
 				color: $pink;
+				padding-bottom: 3px;
 				&:hover {
 					text-decoration: underline;
 				}
