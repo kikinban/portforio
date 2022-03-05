@@ -32,11 +32,6 @@ body {
 	background-color: $main;
 	color: $blue;
 
-	/* 右横スクロールするのを防ぐ */
-	.wrap {
-		overflow: hidden;
-	}
-
 	/* ハンバーガーメニュー配置 */
 	header {
 		height: 40px;
@@ -88,6 +83,7 @@ body {
 
 		nav {
 			margin: 10px 10px 0px 10px;
+			overflow: hidden;
 
 			#header-list {
 				padding: 10px;
