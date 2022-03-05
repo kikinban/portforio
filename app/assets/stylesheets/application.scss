@@ -84,6 +84,7 @@ body {
 		background-color: #fffef5;
 		z-index: 99;
 		overflow: hidden;
+		display: none;
 
 		nav {
 			margin: 10px 10px 0px 10px;
@@ -140,6 +141,7 @@ body {
 	/* クリック時に、リスト表示が右寄りに配置 */
 	input[type="checkbox"]:checked ~ aside {
 		right: 0;
+		display: block;
 	}
 
 	/* クリック時にアイコンが消える */
