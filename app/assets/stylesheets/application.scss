@@ -35,6 +35,8 @@ body {
 	/* ハンバーガーメニュー配置 */
 	header {
 		height: 40px;
+		width: 100%;
+		overflow: hidden;
 
 		.logo-icon {
 			padding: 10px 0px 0px 10px;
