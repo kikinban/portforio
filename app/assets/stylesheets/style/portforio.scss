@@ -156,6 +156,11 @@ main {
 			text-indent: 0.5em;
 			margin: 0 auto;
 		}
+
+		/* ポートフォリオリンク */
+		.site-thoughts-margin {
+			margin: 40px;
+		}
 	}
 
 	/* ---- スライドショー装飾 ---- */
@@ -198,12 +203,16 @@ main {
 			position: relative;
 			width: 100%;
 
+			.thoughts-content-p {
+				margin: 0 auto;
+			}
+
 			/* ---- 学習記録リンク ---- */
 			.record-contents {
 				text-align: left;
 				position: relative;
 				margin: 25px auto;
-				width: 70%;
+				width: 85%;
 
 				.content-p {
 					font-size: 1.2em;
@@ -213,6 +222,7 @@ main {
 				.small-icon-list {
 					display: flex;
 					margin-top: 15px;
+					padding-left: 20px;
 					.record-icon {
 						img {
 							width: 14px;
@@ -375,6 +385,10 @@ main {
 
 		/* 保育システムの感想・内容リンク */
 		.site-thoughts {
+			margin: 20px;
+			.thoughts-content-p {
+				margin: 20px;
+			}
 			a {
 				text-decoration: none;
 				color: $blue;

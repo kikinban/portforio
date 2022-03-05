@@ -125,6 +125,11 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 				width: 100%;
 				font-size: 1.6em;
 			}
+
+			/* 保育システムリンク */
+			.site-thoughts-margin {
+				margin: 40px 0;
+			}
 		}
 		.each-contents-1 {
 			margin: 0 auto;
@@ -187,6 +192,12 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 			.work-content {
 				width: 100%;
 				font-size: 1.6em;
+			}
+			.site-thoughts {
+				margin: 30px;
+				a {
+					font-size: 1.6em;
+				}
 			}
 		}
 	}
