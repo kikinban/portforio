@@ -80,10 +80,10 @@ body {
 		transition: all 0.2s;
 		background-color: #fffef5;
 		z-index: 99;
+		overflow: hidden;
 
 		nav {
 			margin: 10px 10px 0px 10px;
-			overflow: hidden;
 
 			#header-list {
 				padding: 10px;
