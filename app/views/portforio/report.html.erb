@@ -1,7 +1,7 @@
 <div class="margin">
     <%# ---- 新規投稿ボタン ---- %>
     <div class="new-input">
-        <%= link_to("/study-records/new", class: "new-image") do %><%= image_tag("/new.png") %><% end %>
+        <%= link_to("/study_records/new", class: "new-image") do %><%= image_tag("/new.png") %><% end %>
         <%= link_to("新規記録","/study_records/new", class:"new-none") %>
     </div>
     <%# ---- タイトル ---- %>
@@ -86,7 +86,7 @@
         </tr>
         <tr>
             <td>Vue.js 実践入門<br class="table-br"><span class="book-title">~ 2020年版 ~</span></td>
-            <td>山田</td>
+            <td>山田 祥寛</td>
         </tr>
         </table>
     </div>
@@ -96,7 +96,7 @@
         <p class="study-title">学習記録</p>
         <div class="study-links">
             <p><%= link_to("/study_records/new") do %><%= image_tag("/new_blue.png") %><% end %></p>
-            <p><%= link_to("新規記録","/study_records/index")%></p>
+            <p><%= link_to("新規記録","/study_records/new")%></p>
             <p><%= link_to("/study_records/index", class: "study-icon" ) do %><%= image_tag("/date.png") %><% end %></p>
             <p><%= link_to("全記録一覧","/study_records/index")%></p>
         </div>
