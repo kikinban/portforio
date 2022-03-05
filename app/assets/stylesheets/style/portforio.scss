@@ -375,24 +375,22 @@ main {
 
 		/* 保育システムの感想・内容リンク */
 		.site-thoughts {
-			.thoughts-content {
-				a {
+			a {
+				text-decoration: none;
+				color: $blue;
+				border: dashed 2px yellowgreen;
+				padding: 5px;
+				border-radius: 5px;
+				&:hover {
+					text-decoration: underline;
+				}
+
+				&:active {
 					text-decoration: none;
+				}
+
+				&:visited {
 					color: $blue;
-					border: dashed 2px yellowgreen;
-					padding: 5px;
-					border-radius: 5px;
-					&:hover {
-						text-decoration: underline;
-					}
-
-					&:active {
-						text-decoration: none;
-					}
-
-					&:visited {
-						color: $blue;
-					}
 				}
 			}
 		}
