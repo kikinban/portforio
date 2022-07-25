@@ -124,6 +124,12 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 				font-size: 1.6em;
 				width: 100%;
 			}
+
+			.about-link {
+				a {
+					font-size: 1.4em;
+				}
+			}
 		}
 		/* サイトについて */
 		.site-contents {
@@ -244,7 +250,6 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 		/* （タイトル）私について */
 		.about {
 			font-size: 1.6em;
-			width: 100px;
 			height: 18px;
 		}
 
@@ -259,7 +264,6 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 			/* タイトル */
 			.career-title {
 				font-size: 1.6em;
-				width: 40px;
 				height: 18px;
 			}
 			/* 保育士歴 */

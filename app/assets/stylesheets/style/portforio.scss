@@ -159,6 +159,27 @@ main {
 		margin: 0 auto;
 	}
 
+	/* プロフィール詳細ページリンク */
+	.about-link {
+		text-align: right;
+		margin: 10px 0px 40px 0px;
+
+		a {
+			text-decoration: none;
+			color: $blue;
+			border-bottom: dashed 2px yellowgreen;
+			padding-bottom: 2px;
+		}
+
+		&:active {
+			text-decoration: none;
+		}
+
+		&:visited {
+			color: $blue;
+		}
+	}
+
 	/* 月リンク */
 	.header-link {
 		height: 19px;
