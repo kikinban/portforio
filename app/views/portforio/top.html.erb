@@ -5,7 +5,6 @@
         <div class="titles">
         </div>
     </div>
-    
     <%# タイトル文字付与 %>
     <img class="main-image" src="/titlelogo.png" alt="">
 </div>
@@ -14,6 +13,51 @@
 
 <%# 全体コンテンツ（2部構成 %>
 <div class="top-contents">
+  <%# 最新レポート(2022/7追加) %>
+  <div class="latest-reports">
+    <p>【 最新レポート 】</p>
+    <ul >
+      <li>
+        <span>2022/07</span>
+        <%= link_to("(Laravel) Eloquenリレーション", "https://docs.google.com/document/d/1nQ2AO-kgJk2C2lke8KS_Un4qhA5vgxluxgQva6Wlai4/edit?usp=sharing", target: :_blank, rel: "noopener noreferrer" ) %>
+      </li>
+      <li>
+        <span>2022/06</span>
+        <%= link_to("(Laravel) 三項演算子とFormファザード", "https://docs.google.com/document/d/1KvAq58ojWe9l7yvIDdrKpxWVuQVjjmWFISzEMWyCKzg/edit?usp=sharing", target: :_blank, rel: "noopener noreferrer" ) %>
+      </li>
+      <li>
+        <span>2022/05</span>
+        <%= link_to("(Laravel) SpreadSheetsを読み込み、DBに保存", "https://docs.google.com/document/d/1TsGhlSplQYV6bEl6foEU44s7ATNbJxeACg-hel4kWgg/edit?usp=sharing", target: :_blank, rel: "noopener noreferrer" ) %>
+      </li>
+      <li>
+        <span>2022/05</span>
+        <%= link_to("(Laravel) API処理", "https://docs.google.com/document/d/17Vt73anr7DEACJlqURcTYiRY_dY5mSOUq1Njvozw8r0/edit?usp=sharing", target: :_blank, rel: "noopener noreferrer" ) %>
+      </li>
+      <li>
+        <span>2022/05</span>
+        <%= link_to("(Jmeter) 使い方", "https://docs.google.com/document/d/1xioRx2_nBI0F52hMukppC_zAjm68hCYwTtTVbmKdJlc/edit?usp=sharing", target: :_blank, rel: "noopener noreferrer" ) %>
+      </li>
+      <li>
+        <span>2022/05</span>
+        <%= link_to("(Vue.js 3) コンポーネントの理解", "https://docs.google.com/document/d/1h92teV21Z23fTXqSff1A2HLuD5MXgatR7wvDlXgzUDQ/edit?usp=sharing", target: :_blank, rel: "noopener noreferrer" ) %>
+      </li>
+      <li>
+        <span>2022/05</span>
+        <%= link_to("(Laravel) Laravel Breezeでの認証", "https://docs.google.com/document/d/1r40LjHqBhyGAoH1x84pe9rdyKp3FpRt2zWN2GsKZo2Y/edit?usp=sharing", target: :_blank, rel: "noopener noreferrer" ) %>
+      </li>
+      <li>
+        <span>2022/04</span>
+        <%= link_to("(Laravel) オブジェクト指向・Classの理解", "https://docs.google.com/document/d/1HEfzQleunEowZL7dTFHm8ooTf-s-bJVlO7kkKaFk45k/edit?usp=sharing", target: :_blank, rel: "noopener noreferrer" ) %>
+      </li>
+      <li>
+        <span>2022/04</span>
+        <%= link_to("(AWS) AWSを利用して、サイトを公開", "https://docs.google.com/document/d/e/2PACX-1vRSqTgqujvAShk3zFAOViybqKlvMU5POEsERmlcLuX7Cyi4Jo1RgBMmxDOWLuikhrjM_enIlfEls-O5/pub", target: :_blank, rel: "noopener noreferrer" ) %>
+      </li>
+    </ul>
+    <div class="latest-reports-link">
+      <%= link_to("レポート一覧へ", "/report") %>
+    </div>
+  </div>
   <%# 私について %>
   <div class="my-about">
     <h2 class="about-title">My About</h2>
@@ -145,12 +189,6 @@
     <div class="reports">
       <h2 class="site-title">Study Record</h2>
       <p class="site-p">学習記録</p>
-    <div class="site-thoughts">
-      <p class="thoughts-content-p">AWSを利用して、サイトを公開した内容・感想</p>
-      <%= link_to(" → Click ← ", "https://docs.google.com/document/d/e/2PACX-1vRSqTgqujvAShk3zFAOViybqKlvMU5POEsERmlcLuX7Cyi4Jo1RgBMmxDOWLuikhrjM_enIlfEls-O5/pub", target: :_blank, rel: "noopener noreferrer" ) %>
-    </div>
-
-
       <div class="record-contents">
         <p class="content-p">2020年10月から、独学で勉強スタート</p>
         <p class="content-p">学習内容を日ごとに記録（令和3年5月まで）</p>

@@ -90,6 +90,60 @@ main {
 		margin-bottom: 10px;
 		margin-top: 8px;
 	}
+
+	/* 最新レポート */
+	.latest-reports {
+		width: 90%;
+		text-align: center;
+		margin: 0 auto 40px auto;
+
+		p {
+			width: 90%;
+			text-align: left;
+		}
+
+		li {
+			list-style: none;
+			margin: 10px 0 10px 15px;
+			text-align: left;
+
+			span {
+				margin-right: 20px;
+			}
+
+			a {
+				text-decoration: none;
+				color: $blue;
+			}
+
+			&:active {
+				text-decoration: none;
+			}
+
+			&:visited {
+				color: $blue;
+			}
+		}
+
+		.latest-reports-link {
+			text-align: right;
+
+			a {
+				text-decoration: none;
+				color: $blue;
+				border-bottom: dashed 2px yellowgreen;
+				padding-bottom: 2px;
+			}
+
+			&:active {
+				text-decoration: none;
+			}
+
+			&:visited {
+				color: $blue;
+			}
+		}
+	}
 	/* 私について全体 */
 	.my-about {
 		margin-bottom: 20px;
@@ -428,11 +482,11 @@ main {
 //スマホを横に傾けた時に適用
 @import "style/breakpoints/480up";
 
-// //タブレットに適用
+//タブレットに適用
 @import "style/breakpoints/600up";
 
-// //小さいディスプレイやノートpc
+//小さいディスプレイやノートpc
 @import "style/breakpoints/960up";
 
-// //pcディスプレイ
+//pcディスプレイ
 @import "style/breakpoints/1280up";

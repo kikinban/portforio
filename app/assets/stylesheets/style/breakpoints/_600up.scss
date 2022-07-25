@@ -96,6 +96,22 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 			font-size: 1.4em;
 		}
 
+		/* 最新レポート */
+		.latest-reports {
+			width: 100%;
+
+			li {
+				font-size: 14px;
+				margin: 15px 0 10px 15px;
+			}
+
+			.latest-reports-link {
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+
 		/* 私について */
 		.my-about {
 			.about-title {
